@@ -14,9 +14,8 @@ profile:
 
 news: false
 selected_papers: false
-social: true
+social: false
 ---
-
 # 🤖 안녕하세요, 정현석입니다.
 
 **"데이터 너머의 가치를 만듭니다."**
