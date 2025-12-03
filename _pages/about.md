@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /about/
 subtitle: <a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발자 정현석입니다.
 
 profile:
