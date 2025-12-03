@@ -15,7 +15,7 @@ footer_text: >
 # GitHub Pages URL 설정(절대 실수하면 안 되는 핵심!)
 # -----------------------------------------------------------------------------
 url: "https://ddobal.github.io"     # 사용자 깃허브 주소
-baseurl: "/AI-BOX"                  # 리포지토리 이름(대소문자 완벽히 동일)
+baseurl: ""                  # 리포지토리 이름(대소문자 완벽히 동일)
 
 # 최종 접속 URL = https://ddobal.github.io/AI-BOX/
 
