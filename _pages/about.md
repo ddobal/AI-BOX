@@ -36,4 +36,4 @@ social: false
 * **Frameworks**: PyTorch, TensorFlow
 * **Tools**: Git, Docker, Linux
 
-새로운 기술에 대해 토론하는 것을 좋아합니다. 언제든 연락 주세요!
+새로운 기술에 대해 토론하는 것을 좋아합니다. 언제든 연락 주세요! 
