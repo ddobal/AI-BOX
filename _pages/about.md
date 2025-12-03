@@ -12,9 +12,9 @@ profile:
     <p>인공지능학과</p>
     <p>Seoul, Korea</p>
 
-news: false            # 기본 뉴스 섹션 숨기기
-selected_papers: false # 기본 논문 섹션 숨기기
-social: true           # 하단 소셜 아이콘 활성화
+news: false             # 기본 뉴스 섹션 숨기기
+selected_papers: false  # 기본 논문 섹션 숨기기
+social: true            # 하단 소셜 아이콘 활성화
 ---
 
 # 🤖 안녕하세요, 정현석입니다.
