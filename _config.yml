@@ -1,23 +1,82 @@
 # -----------------------------------------------------------------------------
-# Site settings
+# 기본 사이트 정보
 # -----------------------------------------------------------------------------
 title: Hyun-seok Jung's Portfolio
 first_name: Hyun-seok
 last_name: Jung
-email: your_email@gmail.com # 본인 이메일로 변경하세요
-description: AI Researcher & Developer Portfolio
+email: your_email@gmail.com     # 👉 실제 이메일로 바꿔쓰기
+description: AI Engineer & Researcher Portfolio
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with
+  <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
 # -----------------------------------------------------------------------------
-# URL Settings (화면 깨짐 수리 핵심)
+# URL 설정 (GitHub Pages 핵심)
 # -----------------------------------------------------------------------------
-url: "https://ddobal.github.io"  # 본인 깃허브 아이디 주소
-baseurl: "/AI-BOX"               # 리포지토리 이름 (대소문자 정확히)
+url: "https://ddobal.github.io"  # 깃허브 사용자 페이지 주소
+baseurl: "/AI-BOX"               # 리포지토리 이름 (대소문자 포함 정확히)
+
+# 예: 실제 접속 URL은 https://ddobal.github.io/AI-BOX/
 
 # -----------------------------------------------------------------------------
-# Theme Settings
+# 언어 / 테마 / 타임존
 # -----------------------------------------------------------------------------
 theme: al-folio
-lang: ko    # 한국어 설정
+lang: ko
+timezone: Asia/Seoul
 
+# -----------------------------------------------------------------------------
+# SEO & 피드 관련
+# -----------------------------------------------------------------------------
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# -----------------------------------------------------------------------------
+# 마크다운 / 빌드 설정
+# -----------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+permalink: /:categories/:title/
+
+# Jekyll이 무시할 파일/폴더 (필요 시 추가)
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile.lock
+  - README.md
+  - .github/
+
+# -----------------------------------------------------------------------------
+# 컬렉션 설정 (원하면 나중에 projects, talks 등 확장 가능)
+# -----------------------------------------------------------------------------
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# -----------------------------------------------------------------------------
+# 기본 메타데이터 (페이지 front matter에서 안 적었을 때 사용)
+# -----------------------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Hyun-seok Jung"
+
+# -----------------------------------------------------------------------------
+# 네비게이션 및 화면 옵션 (필요 시 점점 추가)
+# -----------------------------------------------------------------------------
+navbar:
+  style: dark
+
+# 홈에서 news/selected_papers 등을 쓸지 여부
+# (about.md front matter에서도 개별 설정 가능)
