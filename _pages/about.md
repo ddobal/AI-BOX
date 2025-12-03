@@ -12,9 +12,9 @@ profile:
      <p>인공지능학과</p>
      <p>Seoul, Korea</p>
 
-news: false             
-selected_papers: false  
-social: true          
+news: false
+selected_papers: false
+social: true
 ---
 
 # 🤖 안녕하세요, 정현석입니다.
