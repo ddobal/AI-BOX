@@ -1,34 +1,33 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>AI Researcher</a>. 인공지능으로 세상을 분석합니다.
 
 profile:
   align: right
-  image: profile-image.png
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: prof_pic.jpg  # assets/img/ 폴더에 이 이름으로 사진을 넣으세요
+  image_circular: false # 네모난 사진이 더 전문적으로 보일 때가 많습니다
+  address: >
+    <p>AI Department</p>
+    <p>Seoul, Korea</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+news: false  # 뉴스 기능 끄기 (관리 귀찮음 방지)
+selected_papers: false # 논문 목록 끄기 (아직 없다면)
+social: true  # 하단 소셜 아이콘 표시
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+# 👋 안녕하세요, 정현석입니다.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+저는 현재 **인공지능(AI)**이 가진 무한한 가능성에 매료되어 깊이 있게 공부하고 있는 학생입니다.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+새로운 지식을 습득하고 이를 실제 코드로 구현해보는 과정을 즐깁니다. 단순히 모델을 돌려보는 것을 넘어, 데이터 속에 숨겨진 의미를 찾고 더 나은 성능을 도출하기 위해 끊임없이 고민합니다.
+
+이곳은 제가 학습한 내용과 진행한 프로젝트들을 기록하는 공간입니다.
+
+### 🚀 관심 분야
+* Machine Learning & Deep Learning
+* Data Analysis
+* AI Application Development
+
+편하게 둘러보시고, 궁금한 점이 있다면 언제든 연락 주세요!
