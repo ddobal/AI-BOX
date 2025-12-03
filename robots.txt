@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ddobal.github.io/sitemap.xml
+Sitemap: https://ddobal.github.io/AI-BOX/sitemap.xml
