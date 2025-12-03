@@ -6,7 +6,7 @@ subtitle: <a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발�
 
 profile:
   align: right
-  image: prof.png
+  image: prof_pic.jpg
   image_circular: false
   address: >
      <p>인공지능학과</p>
