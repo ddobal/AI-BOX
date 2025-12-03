@@ -6,7 +6,7 @@ subtitle: <a href='#'>AI Researcher</a>. 인공지능으로 세상을 분석합�
 
 profile:
   align: right
-  image: prof_pic.jpg  # assets/img/ 폴더에 이 이름으로 사진을 넣으세요
+  image: profile-image.png # assets/img/ 폴더에 이 이름으로 사진을 넣으세요
   image_circular: false # 네모난 사진이 더 전문적으로 보일 때가 많습니다
   address: >
     <p>AI Department</p>
