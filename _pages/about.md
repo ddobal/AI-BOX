@@ -9,8 +9,8 @@ profile:
   image: profile.png
   image_circular: false
   address: >
-    <p>인공지능학과</p>
-    <p>Seoul, Korea</p>
+     <p>인공지능학과</p>
+     <p>Seoul, Korea</p>
 
 news: false             # 기본 뉴스 섹션 숨기기
 selected_papers: false  # 기본 논문 섹션 숨기기
