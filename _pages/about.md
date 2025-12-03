@@ -9,8 +9,8 @@ profile:
   image: prof_pic.png
   image_circular: false
   address: >
-     <p>인공지능학과</p>
-     <p>Seoul, Korea</p>
+    <p>인공지능학과</p>
+    <p>Seoul, Korea</p>
 
 news: false
 selected_papers: false
