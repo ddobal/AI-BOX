@@ -7,7 +7,7 @@ subtitle: <a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발�
 profile:
   align: right
   image: prof_pic.png
-  image_circular: false
+  image_circular: true
   address: >
     <p>인공지능학과</p>
     <p>Seoul, Korea</p>
