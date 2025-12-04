@@ -1,30 +1,15 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+
+# 기본 Jekyll
+gem "jekyll", "~> 4.3"
+gem "webrick"
+
+# Jekyll 플러그인들 (지금 _config.yml 에서 켜둔 것만)
 group :jekyll_plugins do
-    gem 'classifier-reborn'
-    gem 'jekyll'
-    gem 'jekyll-archives'
-    gem "jekyll-seo-tag"
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-get-json'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-jupyter-notebook'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-regex-replace'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-tabs'
-    gem 'jekyll-toc'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-    gem 'mini_racer'
-    gem 'unicode_utils'
-    gem 'webrick'
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
-group :other_plugins do
-    gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
-end
+
+# al-folio 테마를 Gem으로 사용
+gem "al-folio", git: "https://github.com/alshedivat/al-folio.git"
