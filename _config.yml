@@ -40,9 +40,7 @@ collections:
     output: true
     permalink: /projects/:path/
 
-  publications:
-    output: true
-    permalink: /publications/:path/
+# publications removed to avoid Jekyll build errors
 
 # Defaults
 defaults:
@@ -64,12 +62,6 @@ defaults:
     values:
       layout: "project"
 
-  - scope:
-      path: ""
-      type: "publications"
-    values:
-      layout: "publication"
-
 # Scholar (for Google Scholar bibtex)
 scholar:
   style: apa
@@ -85,5 +77,3 @@ exclude:
   - node_modules
   - vendor
   - README.md
-
- 
