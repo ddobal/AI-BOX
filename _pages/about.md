@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /
-subtitle: <a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발자 정현석입니다.
+subtitle: "<a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발자 정현석입니다."
 
 profile:
   align: right
