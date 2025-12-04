@@ -8,13 +8,6 @@ baseurl: "/AI-BOX"
 markdown: kramdown
 highlighter: rouge
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-paginate: 5
-
 collections:
   posts:
     output: true
