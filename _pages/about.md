@@ -1,8 +1,8 @@
 ---
-layout: about
+layout: page
 title: About
 permalink: /
-subtitle: "<a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발자 정현석입니다."
+subtitle: <a href='#'>AI Engineer</a>. 상상을 기술로 구현하는 개발자 정현석입니다.
 
 profile:
   align: right
@@ -29,21 +29,19 @@ social: false
 
 ---
 
-## 🔭 Interests
+### 🔭 Interests
 
 - **Generative AI**: Stable Diffusion, LLM Application  
 - **Computer Vision**: Object Detection, Image Segmentation  
-- **Data Science**: 데이터 전처리 및 시각화
+- **Data Science**: 데이터 전처리 및 시각화  
 
 ---
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 - **Languages**: Python, C++  
 - **Frameworks**: PyTorch, TensorFlow  
-- **Tools**: Git, Docker, Linux
+- **Tools**: Git, Docker, Linux  
 
----
-
-새로운 기술, 특히 **생성형 AI와 딥러닝 응용**에 대해 이야기 나누는 것을 좋아합니다.  
-협업이나 제안이 있다면 언제든 편하게 연락 주세요!
+새로운 기술에 대해 토론하는 것을 좋아합니다.  
+궁금한 점이 있다면 언제든지 편하게 연락 주세요!
