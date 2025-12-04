@@ -1,47 +1,54 @@
+# Site settings
 title: "Hyun-seok Jung's AI-BOX"
 email: ddobal@gmail.com
-description: "Personal research blog."
+description: >-
+  Personal research blog.
 
-url: "https://ddobal.github.io"
-baseurl: "/AI-BOX"
+# GitHub Pages용: 로컬 레이아웃만 쓰고 테마 gem은 안 씀
+theme:
 
+# Build settings
 markdown: kramdown
 highlighter: rouge
 
+# 플러그인 전부 비활성화 (빌드 에러 원인 제거)
+plugins: []
+
+# Collections
 collections:
   posts:
     output: true
     permalink: /blog/:title/
+
   pages:
     output: true
     permalink: /:title/
+
   projects:
     output: true
     permalink: /projects/:path/
 
+# Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: post
+      layout: "post"
 
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: page
+      layout: "page"
 
   - scope:
       path: ""
       type: "projects"
     values:
-      layout: project
+      layout: "project"
 
-publications: false
-selected_papers: false
-scholar: false
-
+# Exclude
 exclude:
   - Gemfile
   - Gemfile.lock
