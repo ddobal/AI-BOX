@@ -75,6 +75,9 @@ scholar:
   style: apa
   locale: en
 
+publications: false
+selected_papers: false
+
 # Exclude
 exclude:
   - Gemfile
@@ -82,3 +85,5 @@ exclude:
   - node_modules
   - vendor
   - README.md
+
+ 
