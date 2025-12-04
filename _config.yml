@@ -63,6 +63,18 @@ collections:
     output: true
     permalink: /blog/:title/
 
+  pages:
+    output: true
+    permalink: /:title/
+
+  news:
+    output: true
+    permalink: /news/:path/
+
+  projects:
+    output: true
+    permalink: /projects/:path/
+
 defaults:
   - scope:
       path: ""
@@ -76,8 +88,3 @@ defaults:
 # -----------------------------------------------------------------------------
 navbar:
   style: dark
-
-collections:
-  pages:
-    output: true
-    permalink: /:title/
