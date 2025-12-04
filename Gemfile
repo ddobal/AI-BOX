@@ -1,11 +1,5 @@
 source "https://rubygems.org"
 
-# Jekyll core
+# 최소 Jekyll만 사용 (플러그인 없음)
 gem "jekyll", "~> 4.3"
 gem "webrick"
-
-group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-end
