@@ -5,8 +5,6 @@ description: "Personal research blog."
 url: "https://ddobal.github.io"
 baseurl: "/AI-BOX"
 
-theme: al-folio
-
 markdown: kramdown
 highlighter: rouge
 
