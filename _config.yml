@@ -33,7 +33,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-third_party_libraries: []   # ← 대괄호만, 따옴표 절대 X
+third_party_libraries:
+  download: false
 
 markdown: kramdown
 highlighter: rouge
