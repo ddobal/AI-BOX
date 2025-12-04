@@ -1,76 +1,54 @@
-# Site settings
 title: "Hyun-seok Jung's AI-BOX"
 email: ddobal@gmail.com
-description: >-
-  Personal research blog.
-baseurl: "/AI-BOX"
-url: "https://ddobal.github.io"
+description: "Personal research blog."
 
-# Theme
+url: "https://ddobal.github.io"
+baseurl: "/AI-BOX"
+
 theme: al-folio
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-scholar
+  - jekyll-seo-tag
 
 paginate: 5
 
-# Collections
 collections:
   posts:
     output: true
     permalink: /blog/:title/
-
   pages:
     output: true
     permalink: /:title/
-
-  news:
-    output: true
-    permalink: /news/:path/
-
   projects:
     output: true
     permalink: /projects/:path/
 
-# publications removed to avoid Jekyll build errors
-
-# Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
-
+      layout: post
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "page"
-
+      layout: page
   - scope:
       path: ""
       type: "projects"
     values:
-      layout: "project"
-
-# Scholar (for Google Scholar bibtex)
-scholar:
-  style: apa
-  locale: en
+      layout: project
 
 publications: false
 selected_papers: false
+scholar: false
 
-# Exclude
 exclude:
   - Gemfile
   - Gemfile.lock
