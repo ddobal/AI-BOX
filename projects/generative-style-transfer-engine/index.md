@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 6
 title: Generative Style Transfer Engine
 permalink: /projects/generative-style-transfer-engine/
 ---
