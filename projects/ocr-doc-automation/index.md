@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 4
 title: OCR Document Automation
 permalink: /projects/ocr-doc-automation/
 ---
