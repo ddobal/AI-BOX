@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 10
 title: Vision-based Face Access Control
 permalink: /projects/vision-face-access-control/
 ---
