@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Object Detection 성능 비교 실험"
-date: 2025-01-02
+date: 2025-12-02
 category: "Computer Vision"
 tags: [yolo, detr, detection]
 ---
