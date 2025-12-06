@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "기초 분류 모델 비교: 로지스틱 회귀 vs KNN"
+title: "하루 동안 내가 만난 인공지능 기능들 기록하기"
 date: 2025-12-01
-tags: [machine-learning, classification, practice]
-excerpt: "기초 분류 알고리즘인 로지스틱 회귀와 KNN을 같은 데이터셋에 적용해 성능과 특징을 비교한 실험 기록."
+tags: [ai, daily-log, thoughts]
+excerpt: "수업이나 과제가 아니라, 평소에 아무 생각 없이 쓰던 인공지능 기능들을 하루 동안 의식적으로 관찰해 본 기록."
 ---
 
 <style>
@@ -20,77 +20,154 @@ excerpt: "기초 분류 알고리즘인 로지스틱 회귀와 KNN을 같은 데
 </style>
 
 <div class="post-section-title">
-  <!-- 목표 아이콘 -->
   <svg viewBox="0 0 24 24" fill="none">
     <circle cx="12" cy="12" r="9" stroke="#38bdf8" stroke-width="1.5"/>
     <circle cx="12" cy="12" r="4" stroke="#38bdf8" stroke-width="1.5"/>
     <path d="M12 8v4l2 2" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" />
   </svg>
-  <h2>실험 목적</h2>
+  <h2>오늘의 목표</h2>
 </div>
 
 <p>
-  이번 실험의 목표는 기초 분류 모델인 로지스틱 회귀와 K-최근접 이웃(KNN)을 직접 돌려보고,
-  둘의 성능과 특성을 비교해보는 것이다. 이론상으로만 알고 있던 내용을
-  실제 데이터에 적용해보면서 감을 잡는 데 초점을 뒀다.
-  사용한 데이터는 사이킷런에서 제공하는 간단한 이진 분류용 예제 데이터(예: breast cancer 데이터셋)를 활용했다.
+  평소엔 그냥 편해서 쓰던 기능들이 사실 대부분 “인공지능 기반”이라는 사실을 잊고 지내곤 한다.
+  그래서 이번 글에서는 하루 동안 내가 자연스럽게 사용했던 AI 기능들을
+  <strong>의식적으로 관찰해 본 작은 기록</strong>을 남겨 보기로 했다.
 </p>
 
+<!-- Hero-style 이미지 -->
+
+::contentReference[oaicite:0]{index=0}
+
+
+---
+
 <div class="post-section-title">
-  <!-- 설정 아이콘 -->
   <svg viewBox="0 0 24 24" fill="none">
     <circle cx="12" cy="12" r="3" stroke="#a855f7" stroke-width="1.5"/>
     <path d="M4 12h2.2M17.8 12H20M7.1 7.1l1.6 1.6M15.3 15.3l1.6 1.6M7.1 16.9l1.6-1.6M15.3 8.7l1.6-1.6"
           stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/>
   </svg>
-  <h2>실험 설정</h2>
+  <h2>하루 동안 만난 AI 기능들</h2>
 </div>
 
 <p>
-  사용 데이터는 scikit-learn 내장 이진 분류 데이터셋이고, train 70%, test 30%로 분할했다.
-  입력 피처는 StandardScaler로 정규화했다.
-</p>
-<p>
-  비교한 모델은 다음과 같다.
-</p>
-<ul>
-  <li>Logistic Regression (L2 정규화, 기본 설정)</li>
-  <li>KNN (k = 3, 5, 7 세 가지)</li>
-</ul>
-<p>
-  성능 평가는 Accuracy와 F1-score를 함께 확인했다.
+  하루를 지내면서 “AI가 쓰였던 순간들”만 따로 기록해 보니,
+  생각보다 훨씬 다양한 분야에서 인공지능이 개입하고 있었다.
 </p>
 
+---
+
+### ☀️ 아침 — 스마트폰 카메라 자동 보정
+
+
+::contentReference[oaicite:1]{index=1}
+
+
+<p>
+  아침에 셀카를 찍을 때 <strong>HDR, 노이즈 감소, 얼굴 보정</strong>이 자동으로 적용된다.
+  따로 ‘AI 켜기 버튼’을 누른 적도 없는데 카메라가 알아서 처리한다.
+  알고 보면 전부 컴퓨터 비전 기반 보정 기능이다.
+</p>
+
+---
+
+### 💬 수업 쉬는 시간 — 키보드 자동완성
+
+
+::contentReference[oaicite:2]{index=2}
+
+
+<p>
+  친구에게 메시지를 보내다가 문장 절반만 입력해도
+  <strong>예측 단어 추천</strong>이 뜬다.
+  내가 평소 입력하던 패턴을 학습해 추천해 주는 “언어모델”이 숨어 있다.
+</p>
+
+---
+
+### 🍚 점심 — 유튜브 추천 알고리즘
+
+
+::contentReference[oaicite:3]{index=3}
+
+
+<p>
+  점심 먹으면서 유튜브를 켰더니 어젯밤 시청 기록 기반으로
+  <strong>비슷한 주제의 영상 추천</strong>이 자동으로 걸려 있었다.
+  추천 시스템이 내 관심사를 꽤 정확히 파악하고 있는 느낌이 든다.
+</p>
+
+---
+
+### 🎧 이동 중 — 음악 스트리밍 추천
+
+
+::contentReference[oaicite:4]{index=4}
+
+
+<p>
+  "오늘의 믹스"처럼 자동 생성된 플레이리스트는
+  취향 기반 추천 알고리즘 덕분에 꽤 높은 정확도로 좋아하는 곡을 제안한다.
+</p>
+
+---
+
+### 📱 밤 — 갤러리 이미지 검색(“강아지”)
+
+
+::contentReference[oaicite:5]{index=5}
+
+
+<p>
+  갤러리 앱에서 <strong>“강아지”라고 검색하면</strong>
+  직접 태그를 단 적이 없어도 관련 사진이 자동으로 분류되어 나타난다.
+  내부적으로는 이미지 분류 모델이 동작하고 있는 셈이다.
+</p>
+
+---
+
 <div class="post-section-title">
-  <!-- 결과 아이콘 -->
   <svg viewBox="0 0 24 24" fill="none">
     <path d="M4 19V5" stroke="#22c55e" stroke-width="1.6"/>
     <path d="M5 15l4-4 4 3 6-7" stroke="#22c55e" stroke-width="1.6" fill="none"/>
   </svg>
-  <h2>결과 요약</h2>
+  <h2>작게 느낀 변화들</h2>
 </div>
 
+
+::contentReference[oaicite:6]{index=6}
+
+
 <p>
-  로지스틱 회귀는 전체적으로 안정적인 성능을 보였고, 과적합 느낌은 거의 없었다.
-  KNN은 k=3일 때 훈련 데이터에 더 잘 맞지만 test 성능이 살짝 떨어지는 경향이 있었고,
-  k가 커질수록 결정 경계가 부드러워지는 느낌이었다.
+  정리해 보니 하루 동안 직접 모델을 만들거나 학습시키지는 않았지만,
+  <strong>학습된 모델을 계속 소비하고 있었다</strong>.
+  특히 ‘추천 알고리즘’의 영향력은 생각보다 크며,
+  자연스럽게 내가 보는 콘텐츠의 범위를 결정해 준다는 점도 느꼈다.
 </p>
 <p>
-  테스트셋 기준으로는 로지스틱 회귀와 KNN(k=5)의 정확도가 비슷하게 나왔고,
-  데이터가 그리 복잡하지 않아서 단순한 모델도 충분히 잘 작동한다는 걸 확인했다.
+  그리고 대부분의 기능은 “AI입니다!”라고 표시하지 않는다.
+  그저 기능이 편해질 뿐인데, 뒤에서는 상당히 복잡한 모델이 작동하는 중이다.
 </p>
 
+---
+
 <div class="post-section-title">
-  <!-- 메모 아이콘 -->
   <svg viewBox="0 0 24 24" fill="none">
     <rect x="5" y="4" width="14" height="16" rx="2" stroke="#e5e7eb" stroke-width="1.4"/>
     <path d="M8 9h8M8 13h5" stroke="#e5e7eb" stroke-width="1.4" stroke-linecap="round"/>
   </svg>
-  <h2>느낀 점</h2>
+  <h2>앞으로를 위한 메모</h2>
 </div>
 
+
+::contentReference[oaicite:7]{index=7}
+
+
 <p>
-  앞으로 복잡한 딥러닝 모델로 넘어가기 전에,
-  이런 기초 분류 모델들만으로도 꽤 많은 문제를 풀 수 있다는 걸 다시 확인했다.
-  성능이 비슷하다면 해석이 쉬운 모델(로지스틱 회귀)을 선택하는 것도 중요한 전략이라는 생각이 들었다.
+  인공지능을 전공하다 보면 ‘모델링’에만 신경 쓰게 될 때가 많다.
+  하지만 실제 서비스에서는 <strong>사용자가 의식하지 못할 정도로 자연스럽게 AI가 스며드는 경험</strong>이 중요하다.
+</p>
+<p>
+  나중에 무언가 직접 만들게 된다면  
+  이번 기록처럼 “사용성 뒤에 숨어 있는 작고 자연스러운 AI 기능”을 넣어보고 싶다.
 </p>
