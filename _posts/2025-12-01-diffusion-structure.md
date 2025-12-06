@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Diffusion 모델 구조 정리"
-date: 2025-01-01
+date: 2025-12-01
 category: "Generative AI"
 tags: [diffusion, unet, attention]
 ---
