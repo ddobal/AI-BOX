@@ -7,16 +7,34 @@ excerpt: "하루 동안 받은 문자들을 모아 간단한 규칙으로 스팸
 ---
 
 <style>
-  .post-section-title{display:flex;align-items:center;gap:8px;margin:20px 0 8px;}
+  .post-section-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:20px 0 8px;
+  }
   .post-section-title svg{width:20px;height:20px;}
-  .inline-diagram{margin:14px auto 20px;max-width:720px;border-radius:14px;background:#020617;
-    border:1px solid rgba(148,163,184,0.45);padding:10px;}
+  .inline-diagram{
+    margin:14px auto 20px;
+    max-width:720px;
+    border-radius:14px;
+    background:#020617;
+    border:1px solid rgba(148,163,184,0.45);
+    padding:10px;
+  }
   .inline-diagram svg{width:100%;display:block;}
-  .inline-diagram-caption{text-align:center;margin-top:6px;font-size:0.8rem;color:#94a3b8;}
+  .inline-diagram-caption{
+    text-align:center;
+    margin-top:6px;
+    font-size:0.8rem;
+    color:#94a3b8;
+  }
 </style>
 
 <div class="post-section-title">
-  <svg viewBox="0 0 24 24"><path d="M3 12h18" stroke="#38bdf8" stroke-width="2"/></svg>
+  <svg viewBox="0 0 24 24">
+    <path d="M3 12h18" stroke="#38bdf8" stroke-width="2"/>
+  </svg>
   <h2>실험 동기</h2>
 </div>
 
@@ -52,7 +70,12 @@ excerpt: "하루 동안 받은 문자들을 모아 간단한 규칙으로 스팸
 
 ---
 
-### 사용한 규칙
+<div class="post-section-title">
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" stroke="#facc15" stroke-width="2"/>
+  </svg>
+  <h2>사용한 규칙</h2>
+</div>
 
 <ul>
   <li>“상담”, “대출”, “광고” 같은 특정 키워드 포함 여부</li>
@@ -68,7 +91,9 @@ excerpt: "하루 동안 받은 문자들을 모아 간단한 규칙으로 스팸
 ---
 
 <div class="post-section-title">
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#22c55e" stroke-width="2"/></svg>
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" stroke="#22c55e" stroke-width="2"/>
+  </svg>
   <h2>느낀 점</h2>
 </div>
 
