@@ -129,6 +129,132 @@
         .page-wrapper {
           padding: 16px 12px 40px;
         }
+      /* ===========================
+         Inner pages: hero + cards
+         =========================== */
+
+      /* 각 페이지 상단 제목/설명 블록 */
+      .content-hero {
+        max-width: 760px;
+        margin: 32px auto 28px;
+        text-align: center;
+      }
+
+      .content-hero-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 18px 0 6px;
+        color: #ffffff;
+        letter-spacing: 0.03em;
+      }
+
+      .content-hero-subtitle {
+        font-size: 0.9rem;
+        color: #c7c7c7;
+        margin-bottom: 6px;
+      }
+
+      .content-hero-description {
+        max-width: 620px;
+        margin: 0 auto 4px;
+        color: #b8b8b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* (선택) 프로필 이미지용 */
+      .content-avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 24px;
+        object-fit: cover;
+        border: 2px solid rgba(255,255,255,0.35);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        background: #000;
+      }
+
+      /* 세로 카드 레이아웃 (About, Blog 등) */
+      .section-card-grid {
+        max-width: 900px;
+        margin: 0 auto 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      /* 가로 그리드 카드 (Projects) */
+      .section-card-grid--columns {
+        max-width: 980px;
+        margin: 0 auto 60px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      @media (max-width: 960px) {
+        .section-card-grid--columns {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .section-card-grid--columns {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .content-hero {
+          margin-top: 24px;
+        }
+      }
+
+      /* 개별 카드 */
+      .section-card {
+        position: relative;
+        padding: 20px 22px 18px;
+        border-radius: 22px;
+        background: radial-gradient(
+          circle at top,
+          #171821 0,
+          #050509 60%,
+          #020308 100%
+        );
+        border: 1px solid rgba(255,255,255,0.05);
+        box-shadow:
+          0 16px 40px rgba(0,0,0,0.85),
+          0 0 0 1px rgba(255,255,255,0.02);
+      }
+
+      .section-card h2 {
+        font-size: 1.05rem;
+        margin: 0 0 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .section-card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 4px;
+      }
+
+      .section-card-meta {
+        font-size: 0.8rem;
+        color: #9f9f9f;
+        margin-bottom: 8px;
+      }
+
+      .section-card p,
+      .section-card li {
+        font-size: 0.9rem;
+        color: #c5c5c5;
+        line-height: 1.6;
+      }
+
+      .section-card ul {
+        margin: 6px 0 0 18px;
+        padding: 0;
+      }
 
         .site-header {
           top: 8px;
