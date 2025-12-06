@@ -4,7 +4,8 @@ title: "Hyun-seok Jung's AI-BOX"
 subtitle: "AI Research & Engineering Portfolio"
 ---
 
-![profile](/assets/img/prof_pic.png){: style="width:220px; float:left; margin-right:20px;"}
+![profile](/assets/img/prof_pic.png){: style="width:200px; border-radius:10px;"}
+
 
 ## 👋 Welcome!
 
