@@ -103,7 +103,7 @@ permalink: /about/
 </style>
 
 <!-- 프로필 + 바이오 + 스킬 태그 -->
-<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+<div class="section-card">
   <div class="about-profile-wrapper">
     <div class="about-profile-photo">
       <!-- TODO: 여기에 실제 프로필 이미지 경로 넣기 -->
@@ -147,14 +147,14 @@ permalink: /about/
 
 
 <!-- 소개 -->
-<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+<div class="section-card">
   <div class="about-section-title">
     <svg viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="10" stroke="#7dd3fc" stroke-width="1.4"/>
       <path d="M12 8.5v.01" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
       <path d="M12 11v5" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    <h2>소개</h2>
+    <h2>포트폴리오 소개</h2>
   </div>
 
   <p>
@@ -173,7 +173,7 @@ permalink: /about/
 
 
 <!-- 관심 분야 -->
-<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+<div class="section-card">
   <div class="about-section-title">
     <svg viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="9" stroke="#a78bfa" stroke-width="1.4"/>
@@ -203,7 +203,7 @@ permalink: /about/
 
 
 <!-- 포트폴리오를 만든 이유 -->
-<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+<div class="section-card">
   <div class="about-section-title">
     <svg viewBox="0 0 24 24" fill="none">
       <path d="M12 3l8 4-8 4-8-4 8-4z" stroke="#f9a8d4" stroke-width="1.4" />
@@ -229,7 +229,7 @@ permalink: /about/
 
 
 <!-- 향후 계획 -->
-<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+<div class="section-card">
   <div class="about-section-title">
     <svg viewBox="0 0 24 24" fill="none">
       <path d="M5 3h14v4H5z" stroke="#c084fc" stroke-width="1.4"/>
