@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+<h1>{{ page.title }}</h1>
+
+{% if site.posts.size == 0 %}
+  <p class="muted">아직 작성한 글이 없습니다.</p>
+{% else %}
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-item">
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
