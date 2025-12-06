@@ -34,7 +34,7 @@ permalink: /about/
 
   /* About 페이지 전용: 카드 간 세로 간격 / 내부 여백 조정 */
   .about-container .section-card {
-    margin-bottom: 48px !important;   /* 카드 사이 간격 넉넉하게 */
+    margin-bottom: 32px !important;   /* 카드 사이 간격 넉넉하게 */
     padding: 28px 28px 30px;          /* 기본보다 살짝 넓게 */
   }
 
