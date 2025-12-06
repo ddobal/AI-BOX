@@ -1,11 +1,36 @@
 ---
-layout: page
+layout: default
 ---
 
-<article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <p class="post-date">{{ page.date | date: "%Y-%m-%d" }}</p>
-  <div class="post-body">
-    {{ content }}
+<!-- 📌 BLOG POST MINI HERO -->
+<div class="page-mini-hero">
+  <div class="page-mini-hero-icon">
+    <!-- 펜/글쓰기 SVG 아이콘 -->
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+      <path d="M3 17.25V21h3.75l11-11.03-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+            fill="url(#postGrad)" />
+      <defs>
+        <linearGradient id="postGrad">
+          <stop offset="0%" stop-color="#38f9d7"/>
+          <stop offset="100%" stop-color="#4facfe"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
-</article>
+
+  <h1>{{ page.title }}</h1>
+
+  <p class="mini-hero-sub">
+    {{ page.date | date: "%Y년 %m월 %d일" }}
+    {% if page.category %} · {{ page.category }} {% endif %}
+    {% if page.tags %}
+      · Tags: {{ page.tags | join: ", " }}
+    {% endif %}
+  </p>
+</div>
+
+
+<!-- 📌 POST CONTENT -->
+<div class="section-card" style="max-width:900px; margin:0 auto 80px; padding:32px;">
+  {{ content }}
+</div>
