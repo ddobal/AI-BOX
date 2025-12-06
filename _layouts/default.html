@@ -97,23 +97,61 @@
         gap: 10px;
       }
 
-      .site-nav a {
+      /* 네온 칩 스타일 내비게이션 */
+
+      .nav-link {
+        position: relative;
+        padding: 6px 16px;
+        border-radius: 999px;
         font-size: 0.85rem;
         font-weight: 500;
-        color: #d6d6d6;
+        letter-spacing: 0.03em;
+        color: rgba(226, 232, 255, 0.7);
         text-decoration: none;
-        padding: 6px 14px;
-        border-radius: 999px;
         border: 1px solid transparent;
-        transition: all 0.18s ease-out;
+        transition:
+          color 0.2s ease,
+          background 0.2s ease,
+          box-shadow 0.25s ease,
+          transform 0.2s ease,
+          border-color 0.2s ease;
         white-space: nowrap;
       }
 
-      .site-nav a:hover {
+      .nav-link:hover {
         color: #ffffff;
-        border-color: rgba(255, 255, 255, 0.35);
+        border-color: rgba(255, 255, 255, 0.25);
         background: rgba(0, 0, 0, 0.45);
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        transform: translateY(-1px);
+      }
+
+      .nav-link--active {
+        color: #ffffff;
+        background: radial-gradient(
+          circle at top,
+          #3b82f6 0,
+          #1d4ed8 45%,
+          #4c1d95 100%
+        );
+        border-color: rgba(191, 219, 254, 0.8);
+        box-shadow:
+          0 0 18px rgba(56, 189, 248, 0.55),
+          0 0 40px rgba(129, 140, 248, 0.28);
+        transform: translateY(-1px);
+      }
+
+      .nav-link--active::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(96, 165, 250, 0.95);
+        transform: translateX(-50%);
+        box-shadow: 0 0 12px rgba(96, 165, 250, 0.95);
       }
 
       main.page-content {
@@ -376,7 +414,7 @@
         padding: 0;
       }
 
-      /* 링크 카드용 (Blog 목록) */
+      /* 링크 카드용 (Blog / Projects 목록) */
       .section-card-link {
         text-decoration: none;
         color: inherit;
@@ -443,11 +481,38 @@
           </p>
         </div>
 
+        {% assign current = page.url | downcase %}
         <nav class="site-nav">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
-          <a href="{{ '/projects/' | relative_url }}">Projects</a>
-          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a
+            href="{{ '/' | relative_url }}"
+            class="nav-link {% if current == '/' or current == '/index.html' %}nav-link--active{% endif %}"
+          >
+            Home
+          </a>
+
+          <a
+            href="{{ '/about/' | relative_url }}"
+            class="nav-link {% if current contains '/about/' %}nav-link--active{% endif %}"
+          >
+            About
+          </a>
+
+          <a
+            href="{{ '/projects/' | relative_url }}"
+            class="nav-link {% if current contains '/projects/' %}nav-link--active{% endif %}"
+          >
+            Projects
+          </a>
+
+          <a
+            href="{{ '/blog/' | relative_url }}"
+            class="nav-link
+              {% if current contains '/blog/' or page.layout == 'post' %}
+                nav-link--active
+              {% endif %}"
+          >
+            Blog
+          </a>
         </nav>
       </header>
 
