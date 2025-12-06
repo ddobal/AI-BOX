@@ -26,6 +26,15 @@ permalink: /projects/
     height: 20px;
     display: block;
   }
+
+  /* 이 페이지에서만 그리드 폭을 mini-hero(820px)와 맞추기 */
+  .section-card-grid--columns {
+    max-width: 820px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
 </style>
 
 <!-- 📌 미니 히어로 (기존 로켓 아이콘 유지) -->
