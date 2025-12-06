@@ -7,16 +7,34 @@ excerpt: "사진 앱의 ‘추억 자동 생성’ 기능 뒤에서 어떤 AI가
 ---
 
 <style>
-  .post-section-title{display:flex;align-items:center;gap:8px;margin:20px 0 8px;}
+  .post-section-title{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:20px 0 8px;
+  }
   .post-section-title svg{width:20px;height:20px;}
-  .inline-diagram{margin:14px auto 20px;max-width:720px;border-radius:14px;background:#020617;
-    border:1px solid rgba(148,163,184,0.45);padding:10px;}
+  .inline-diagram{
+    margin:14px auto 20px;
+    max-width:720px;
+    border-radius:14px;
+    background:#020617;
+    border:1px solid rgba(148,163,184,0.45);
+    padding:10px;
+  }
   .inline-diagram svg{width:100%;display:block;}
-  .inline-diagram-caption{text-align:center;margin-top:6px;font-size:0.8rem;color:#94a3b8;}
+  .inline-diagram-caption{
+    text-align:center;
+    margin-top:6px;
+    font-size:0.8rem;
+    color:#94a3b8;
+  }
 </style>
 
 <div class="post-section-title">
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#38bdf8" stroke-width="2"/></svg>
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" stroke="#38bdf8" stroke-width="2"/>
+  </svg>
   <h2>무슨 기능인지?</h2>
 </div>
 
@@ -59,16 +77,18 @@ excerpt: "사진 앱의 ‘추억 자동 생성’ 기능 뒤에서 어떤 AI가
 ### 관찰해본 기능
 
 <ul>
-  <li>비슷한 시간대에 찍힌 사진들을 하나의 묶음으로 정리</li>
-  <li>같은 사람이 여러 번 등장하는 사진을 골라 강조</li>
-  <li>장소 정보를 활용해 “여행”, “카페” 같은 분위기 별로 묶는 느낌</li>
-  <li>사진 분위기에 어울리는 BGM을 자동으로 붙여주는 연출</li>
+  <li>비슷한 <strong>시간대</strong>에 찍힌 사진들을 하나의 묶음으로 정리해 준다.</li>
+  <li>같은 <strong>사람 얼굴이 여러 번 등장</strong>하는 사진을 골라 하이라이트에 넣어 준다.</li>
+  <li><strong>위치 정보(장소)</strong>를 이용해 “여행”, “카페” 같은 분위기별로 자동 분류하는 느낌이다.</li>
+  <li>사진 전체 분위기에 맞는 <strong>BGM과 전환 효과</strong>를 자동으로 붙여 짧은 영상으로 만들어 준다.</li>
 </ul>
 
 ---
 
 <div class="post-section-title">
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke="#22c55e" stroke-width="2"/></svg>
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" stroke="#22c55e" stroke-width="2"/>
+  </svg>
   <h2>느낀 점</h2>
 </div>
 
