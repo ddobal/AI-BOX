@@ -27,17 +27,14 @@ permalink: /projects/
     display: block;
   }
 
-  /* 이 페이지에서만 그리드 폭 조정 */
   .section-card-grid--columns {
-    max-width: 900px; /* 820 → 900 으로 살짝 넓힘 */
+    max-width: 900px;
     margin: 0 auto 60px;
   }
 </style>
 
-<!-- 📌 미니 히어로 (기존 로켓 아이콘 유지) -->
 <div class="page-mini-hero">
   <div class="page-mini-hero-icon">
-    <!-- 로켓 SVG -->
     <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
       <path d="M12 2c2.4 0 4.8.8 6.4 2.4l-4.8 4.8H8L12 2zM4 20l2.4-6.4h4.8l4.8 4.8A10 10 0 0 1 12 22c-2.4 0-4.8-.8-6.4-2.4z"
             fill="url(#rocketGrad)"/>
@@ -52,15 +49,13 @@ permalink: /projects/
 
   <h1>Projects</h1>
   <p class="mini-hero-sub">
-    연구 및 개인 개발로 진행한 주요 프로젝트들을 정리합니다.  
-    대부분 실제로 빌드하거나 실험한 코드와 구조를 기반으로 하고 있습니다.
+    인공지능학과 2학년 수준에서 수행할 수 있는 실습 기반 프로젝트들을 정리해두었습니다.  
+    머신러닝·딥러닝·데이터 분석·컴퓨터비전 기초 수업 중심으로 구성했습니다.
   </p>
 </div>
 
-<!-- 📌 카드 목록 -->
 <div class="section-card-grid--columns">
 
-  <!-- 공통 프로젝트 아이콘 (격자/보드 느낌) -->
   {% capture project_icon_svg %}
   <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <rect x="4" y="4" width="6" height="6" rx="1.2" stroke="white" stroke-width="1.4" />
@@ -70,153 +65,94 @@ permalink: /projects/
   </svg>
   {% endcapture %}
 
-  <!-- 1: AI Vision Automation -->
-  <a class="section-card section-card-link" href="{{ '/projects/ai-vision-automation/' | relative_url }}">
+  <!-- 1: MNIST 숫자 손글씨 분류 -->
+  <a class="section-card section-card-link" href="{{ '/projects/mnist-digit-classification/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      AI Vision Automation
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      MNIST 손글씨 숫자 분류
     </h2>
-    <p class="section-card-meta">Computer Vision · Automation</p>
+    <p class="section-card-meta">Machine Learning · 딥러닝 기초</p>
     <p>
-      실시간 Object Detection + Tracking을 기반으로  
-      특정 이벤트 자동 감지 및 로깅을 수행하는 현장 자동화 시스템 구축.
+      CNN 기반 모델로 MNIST 숫자 이미지를 분류하는 기본 딥러닝 실습.  
+      초기 모델과 개선 모델을 비교하며 학습률·에폭에 따른 성능 변화를 분석함.
     </p>
   </a>
 
-  <!-- 2: Diffusion-based Image Generator -->
-  <a class="section-card section-card-link" href="{{ '/projects/diffusion-image-generator/' | relative_url }}">
+  <!-- 2: 영화 리뷰 감성 분석 -->
+  <a class="section-card section-card-link" href="{{ '/projects/movie-review-sentiment/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      Diffusion-based Image Generator
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      영화 리뷰 감성 분석
     </h2>
-    <p class="section-card-meta">Generative AI</p>
+    <p class="section-card-meta">NLP · 텍스트 분류</p>
     <p>
-      Stable Diffusion 기반 모델을 커스터마이징하여  
-      캐릭터/프로필/컨셉 아트 생성 자동화 파이프라인 제작.
+      IMDB 리뷰 데이터를 이용해 긍정/부정 분류 모델을 구축.  
+      TF-IDF 및 간단한 RNN 모델을 사용해 텍스트 처리 흐름을 실습함.
     </p>
   </a>
 
-  <!-- 3: RL Trading Bot -->
-  <a class="section-card section-card-link" href="{{ '/projects/rl-trading-bot/' | relative_url }}">
+  <!-- 3: 식물 잎 병해 이미지 분류 -->
+  <a class="section-card section-card-link" href="{{ '/projects/leaf-disease-classification/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      RL Trading Bot
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      식물 잎 병해 이미지 분류
     </h2>
-    <p class="section-card-meta">Reinforcement Learning · Trading</p>
+    <p class="section-card-meta">Computer Vision</p>
     <p>
-      강화학습 환경 구축 → 정책 학습 →  
-      거래소 API 실거래 연동까지 진행한 트레이딩 에이전트 실험 프로젝트.
+      Kaggle PlantVillage 데이터셋을 활용해  
+      건강한 잎과 병충해 잎을 구분하는 이미지 분류 모델 개발.
     </p>
   </a>
 
-  <!-- 4: OCR 기반 문서 자동화 시스템 -->
-  <a class="section-card section-card-link" href="{{ '/projects/ocr-doc-automation/' | relative_url }}">
+  <!-- 4: 대중교통 승객 수 예측 -->
+  <a class="section-card section-card-link" href="{{ '/projects/bus-passenger-forecast/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      OCR 기반 문서 자동화 시스템
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      대중교통 승객 수 예측
     </h2>
-    <p class="section-card-meta">OCR · NLP · Automation</p>
+    <p class="section-card-meta">Time Series · Forecasting</p>
     <p>
-      문서 스캔 이미지를 OCR로 텍스트 변환 후,  
-      필드 자동 분류·정제하여 업무 자동화를 구현한 프로젝트.
+      특정 노선의 시간대별 승객 데이터를 기반으로  
+      단순 LSTM 모델을 사용해 미래 승객 수를 예측한 프로젝트.
     </p>
   </a>
 
-  <!-- 5: Realtime Human Pose Tracking -->
-  <a class="section-card section-card-link" href="{{ '/projects/realtime-human-pose-tracking/' | relative_url }}">
+  <!-- 5: 간단한 챗봇 만들기 -->
+  <a class="section-card section-card-link" href="{{ '/projects/basic-chatbot/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      Realtime Human Pose Tracking
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      간단한 규칙 기반 챗봇
     </h2>
-    <p class="section-card-meta">Pose Estimation · OpenCV</p>
+    <p class="section-card-meta">NLP 기초 · Rule-based AI</p>
     <p>
-      MoveNet 기반 실시간 신체 포즈 분석 시스템.  
-      특정 동작 감지 및 자세 분석 기능을 포함.
+      패턴 매칭과 간단한 의도 분류를 이용하여  
+      FAQ 응답이 가능한 기본 챗봇을 구현한 실습 프로젝트.
     </p>
   </a>
 
-  <!-- 6: Generative Style Transfer Engine -->
-  <a class="section-card section-card-link" href="{{ '/projects/generative-style-transfer-engine/' | relative_url }}">
+  <!-- 6: 온라인 쇼핑몰 고객 데이터 분석 -->
+  <a class="section-card section-card-link" href="{{ '/projects/ecommerce-data-analysis/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      Generative Style Transfer Engine
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      온라인 쇼핑몰 고객 데이터 분석
     </h2>
-    <p class="section-card-meta">Generative AI · Image2Image</p>
+    <p class="section-card-meta">Data Analysis</p>
     <p>
-      다중 스타일 이미지 변환을 위한 Style Transfer 엔진 제작.  
-      예술 스타일, 캐릭터 스타일 등 자동 변환.
+      구매 이력 데이터에서 고객 유형을 분류하고  
+      RFM 분석을 통해 소비 패턴을 시각화하는 데이터 분석 프로젝트.
     </p>
   </a>
 
-  <!-- 7: AI 기반 음식 칼로리 추정 -->
-  <a class="section-card section-card-link" href="{{ '/projects/ai-food-calorie-estimation/' | relative_url }}">
+  <!-- 7: 간단한 객체 탐지 실습 -->
+  <a class="section-card section-card-link" href="{{ '/projects/simple-object-detection/' | relative_url }}">
     <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      AI 기반 음식 칼로리 추정
+      <span class="section-heading-icon">{{ project_icon_svg }}</span>
+      간단한 객체 탐지 실습
     </h2>
-    <p class="section-card-meta">Classification · Computer Vision</p>
+    <p class="section-card-meta">Computer Vision · OpenCV</p>
     <p>
-      음식 이미지로 음식 종류·양을 추정해  
-      칼로리를 예측하는 CV 모델 실험.
-    </p>
-  </a>
-
-  <!-- 8: Time-series Anomaly Detection -->
-  <a class="section-card section-card-link" href="{{ '/projects/time-series-anomaly-detection/' | relative_url }}">
-    <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      Time-series Anomaly Detection
-    </h2>
-    <p class="section-card-meta">Deep Learning · Forecasting</p>
-    <p>
-      제조·금융 데이터 기반 이상치 탐지를 위한  
-      시계열 LSTM/GRU 예측 모델 실험.
-    </p>
-  </a>
-
-  <!-- 9: AI Voice TTS System -->
-  <a class="section-card section-card-link" href="{{ '/projects/ai-voice-tts-system/' | relative_url }}">
-    <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      AI Voice TTS System
-    </h2>
-    <p class="section-card-meta">Speech · TTS</p>
-    <p>
-      Tacotron2 + HiFiGAN 기반 커스텀 음색 TTS 모델.  
-      짧은 데이터로 개인 음색 복제 실험.
-    </p>
-  </a>
-
-  <!-- 10: Vision 기반 얼굴 인증 출입 시스템 -->
-  <a class="section-card section-card-link" href="{{ '/projects/vision-face-access-control/' | relative_url }}">
-    <h2 class="section-heading">
-      <span class="section-heading-icon">
-        {{ project_icon_svg }}
-      </span>
-      Vision 기반 얼굴 인증 출입 시스템
-    </h2>
-    <p class="section-card-meta">Face Recognition · Automation</p>
-    <p>
-      얼굴 인식 기반 출입 관리 프로토타입 제작.  
-      Embedding + Threshold 기반 인증 구조 설계.
+      OpenCV의 Haar Cascade를 활용해 얼굴·사물 검출을 실습하는 기초 CV 프로젝트.  
+      실제 딥러닝 기반 탐지 모델(YOLO 등)과의 차이를 비교해보는 것이 목표.
     </p>
   </a>
 
