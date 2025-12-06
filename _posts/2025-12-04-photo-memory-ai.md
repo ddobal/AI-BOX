@@ -74,7 +74,12 @@ excerpt: "사진 앱의 ‘추억 자동 생성’ 기능 뒤에서 어떤 AI가
 
 ---
 
-### 관찰해본 기능
+<div class="post-section-title">
+  <svg viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" stroke="#facc15" stroke-width="2"/>
+  </svg>
+  <h2>관찰해본 기능</h2>
+</div>
 
 <ul>
   <li>비슷한 <strong>시간대</strong>에 찍힌 사진들을 하나의 묶음으로 정리해 준다.</li>
