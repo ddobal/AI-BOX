@@ -129,7 +129,7 @@
         .page-wrapper {
           padding: 16px 12px 40px;
         }
-      /* ===========================
+          /* ===========================
          Inner pages: hero + cards
          =========================== */
 
@@ -160,6 +160,161 @@
         color: #b8b8b8;
         font-size: 0.95rem;
         line-height: 1.6;
+      }
+
+      /* (선택) 프로필 이미지용 */
+      .content-avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 24px;
+        object-fit: cover;
+        border: 2px solid rgba(255,255,255,0.35);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+        background: #000;
+      }
+
+      /* 세로 카드 레이아웃 (About, Blog 등) */
+      .section-card-grid {
+        max-width: 900px;
+        margin: 0 auto 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      /* 가로 그리드 카드 (Projects) */
+      .section-card-grid--columns {
+        max-width: 980px;
+        margin: 0 auto 60px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      @media (max-width: 960px) {
+        .section-card-grid--columns {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .section-card-grid--columns {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        .content-hero {
+          margin-top: 24px;
+        }
+      }
+
+      /* 개별 카드 */
+      .section-card {
+        position: relative;
+        padding: 20px 22px 18px;
+        border-radius: 22px;
+        background: radial-gradient(
+          circle at top,
+          #171821 0,
+          #050509 60%,
+          #020308 100%
+        );
+        border: 1px solid rgba(255,255,255,0.05);
+        box-shadow:
+          0 16px 40px rgba(0,0,0,0.85),
+          0 0 0 1px rgba(255,255,255,0.02);
+        overflow: hidden;
+        transition:
+          transform 0.22s ease-out,
+          box-shadow 0.22s ease-out,
+          border-color 0.22s ease-out,
+          background 0.22s ease-out;
+      }
+
+      /* 카드 안쪽 네온 오라 */
+      .section-card::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background: conic-gradient(
+          from 150deg,
+          rgba(88,101,242,0.0),
+          rgba(88,101,242,0.28),
+          rgba(56,249,215,0.22),
+          rgba(196,113,237,0.3),
+          rgba(88,101,242,0.0)
+        );
+        opacity: 0;
+        filter: blur(32px);
+        z-index: -1;
+        transition: opacity 0.35s ease-out;
+      }
+
+      /* hover 시 살짝 떠오르고 네온 강조 */
+      .section-card:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 24px 52px rgba(0,0,0,0.95),
+          0 0 0 1px rgba(255,255,255,0.06);
+        border-color: rgba(88,101,242,0.7);
+        background: radial-gradient(
+          circle at top,
+          #202234 0,
+          #050509 60%,
+          #010206 100%
+        );
+      }
+
+      .section-card:hover::before {
+        opacity: 0.65;
+      }
+
+      .section-card h2 {
+        font-size: 1.05rem;
+        margin: 0 0 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        padding-bottom: 4px;
+      }
+
+      /* 제목 아래 그라디언트 언더라인 */
+      .section-card h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 2px;
+        border-radius: 999px;
+        background: linear-gradient(120deg, #4facfe, #38f9d7, #c471ed);
+        opacity: 0.8;
+      }
+
+      .section-card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 0 0 4px;
+      }
+
+      .section-card-meta {
+        font-size: 0.75rem;
+        color: #9f9f9f;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .section-card p,
+      .section-card li {
+        font-size: 0.9rem;
+        color: #c5c5c5;
+        line-height: 1.6;
+      }
+
+      .section-card ul {
+        margin: 6px 0 0 18px;
+        padding: 0;
       }
 
       /* (선택) 프로필 이미지용 */
