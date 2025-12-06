@@ -1,42 +1,66 @@
 ---
 layout: page
-title: "Hyun-seok Jung's AI-BOX"
-subtitle: "AI Engineer & Product Developer"
+title: "Hyun-seok Jung"
+subtitle: "AI Engineer · Product Developer"
 ---
 
-<img src="/assets/img/prof_pic.png" alt="profile" style="width:180px; border-radius:12px; float:left; margin-right:20px;">
+<style>
+.hero {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
 
-## 👋 Hi, I'm Hyun-seok Jung  
-AI Engineer specializing in **Computer Vision, Generative AI, and Product Development**.
+.hero img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+}
 
-I design, build, and deploy AI-powered products — from rapid prototypes to fully-operational systems.  
-My work focuses on:
+.gradient-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6d5dfc, #4fc3f7);
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.2s;
+}
 
-- **AI 제품 개발(Product Development)**  
-- **Model Engineering (CV · Diffusion · LLM)**  
-- **AI Automation · Backend · MLOps**  
-- **Deployment on Cloud / Web / Edge**
+.gradient-btn:hover {
+  opacity: 0.8;
+}
+</style>
+
+<div class="hero">
+  <img src="/assets/img/prof_pic.png" alt="profile">
+
+  # Hyun-seok Jung  
+  ### AI Engineer & Product Developer
+
+  Building intelligent systems through Computer Vision, Generative AI and automation.
+
+  <br>
+
+  <a href="/about/" class="gradient-btn">About Me</a>
+  <a href="/projects/" class="gradient-btn">Projects</a>
+  <a href="/blog/" class="gradient-btn">Blog</a>
+</div>
 
 ---
 
-## 🚀 Featured Projects  
-> 대표 프로젝트는 Projects 페이지에서 더 자세히 볼 수 있어요.
-
-### 🔹 AI-BOX Automation  
-딥러닝 기반 자동화 분석 & 시스템 설계
-
-### 🔹 Vision Detector  
-YOLO 기반 객체 탐지(Detection) · Tracking 파이프라인 구현
-
-### 🔹 Generative Transformer  
-이미지 생성 & 변환 모델 실험
-
-→ **더 많은 프로젝트 보기 → /projects/**
-
----
-
-## 🛠️ Tech Stack (요약)
-**Languages:** Python, C++, JavaScript  
-**Frameworks:** PyTorch, TensorFlow, FastAPI  
-**Tools:** Docker, Git, Linux, ONNX, OpenCV  
-**Cloud:** AWS · GCP · Azure  
+# 🚀 Featured Skills
+- **AI Engineering:** CV, Diffusion, Transformers  
+- **Product Dev:** Backend, API, Automation  
+- **Deployment:** Docker, Linux, Cloud  
