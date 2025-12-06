@@ -70,8 +70,8 @@ order: 5
 
     <!-- Fallback -->
     <rect x="300" y="190" width="200" height="50" rx="10" fill="#020617" stroke="#f97316" stroke-width="1.8"/>
-    <text x="400" y="220" font-size="13" fill="#fed7aa" text-anchor="middle">
-      매칭 실패 → 기본 응답(“잘 이해하지 못했습니다”)
+    <text x="400" y="215" font-size="13" fill="#fed7aa" text-anchor="middle">
+      매칭 실패 → 기본 응답 처리
     </text>
 
     <!-- Arrow to fallback -->
