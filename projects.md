@@ -27,13 +27,10 @@ permalink: /projects/
     display: block;
   }
 
-  /* 이 페이지에서만 그리드 폭을 mini-hero(820px)와 맞추기 */
+  /* 이 페이지에서만 그리드 폭 조정 */
   .section-card-grid--columns {
-    max-width: 820px;
+    max-width: 900px; /* 820 → 900 으로 살짝 넓힘 */
     margin: 0 auto 60px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
   }
 </style>
 
