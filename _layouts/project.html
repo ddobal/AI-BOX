@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<!-- 📌 프로젝트 상세 내용 래퍼 -->
-<div class="project-content-wrapper" style="max-width:900px; margin:0 auto 32px;">
+<!-- 📌 프로젝트 상세 내용 래퍼 (Blog와 동일 폭/마진) -->
+<div class="project-content-wrapper" style="max-width:900px; margin:0 auto 40px;">
   {{ content }}
 </div>
 
-<!-- 📌 PROJECT PREV / NEXT NAVIGATION -->
+<!-- 📌 PROJECT PREV / NEXT NAVIGATION (구조/스타일 → post.html과 동일) -->
 {% assign projects = site.pages | where: "layout", "project" | sort: "order" %}
 {% assign current_url = page.url %}
 {% assign current_index = nil %}
