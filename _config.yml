@@ -12,6 +12,8 @@ markdown: kramdown
 theme: null
 permalink: /blog/:year/:month/:day/:title/
 
+theme_mode: auto
+
 # GitHub Pages에서 허용되는 플러그인만 사용
 plugins:
   - jekyll-seo-tag
