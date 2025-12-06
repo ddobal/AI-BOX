@@ -104,9 +104,9 @@ permalink: /
   </p>
 
   <div>
-    <a href="/about/" class="gradient-btn">About Me</a>
-    <a href="/projects/" class="gradient-btn">Projects</a>
-    <a href="/blog/" class="gradient-btn">Blog</a>
+    <a href="{{ '/about/' | relative_url }}" class="gradient-btn">About Me</a>
+    <a href="{{ '/about/' | relative_url }}" class="gradient-btn">Projects</a>
+    <a href="{{ '/about/' | relative_url }}" class="gradient-btn">Blog</a>
   </div>
 
   <div class="badge-row">
