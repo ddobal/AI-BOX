@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<!-- 📌 BLOG POST MINI HERO -->
+<!-- 📌 블로그 글 미니 히어로 -->
 <div class="page-mini-hero">
   <div class="page-mini-hero-icon">
-    <!-- 펜/글쓰기 SVG 아이콘 -->
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-      <path d="M3 17.25V21h3.75l11-11.03-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-            fill="url(#postGrad)" />
+    <!-- 펜 아이콘 SVG -->
+    <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
+      <path d="M4 20.5V18l9.8-9.8 2.5 2.5L6.5 20.5H4z" fill="url(#penGrad)"/>
+      <path d="M15.6 4.4l2-2a1.4 1.4 0 0 1 2 0l2 2a1.4 1.4 0 0 1 0 2l-2 2-4-4z"
+            fill="url(#penGrad)"/>
       <defs>
-        <linearGradient id="postGrad">
-          <stop offset="0%" stop-color="#38f9d7"/>
-          <stop offset="100%" stop-color="#4facfe"/>
+        <linearGradient id="penGrad" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#60a5fa"/>
+          <stop offset="100%" stop-color="#a855f7"/>
         </linearGradient>
       </defs>
     </svg>
@@ -21,26 +22,34 @@ layout: default
   <h1>{{ page.title }}</h1>
 
   <p class="mini-hero-sub">
-    {{ page.date | date: "%Y년 %m월 %d일" }}
-    {% if page.category %} · {{ page.category }} {% endif %}
+    {{ page.date | date: "%Y-%m-%d" }}
     {% if page.tags %}
-      · Tags: {{ page.tags | join: ", " }}
+      · Tags:
+      {% for tag in page.tags %}
+        {{ tag }}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
     {% endif %}
   </p>
 </div>
 
-<!-- 📌 POST CONTENT -->
-<div class="section-card" style="max-width:820px; margin:0 auto 32px; padding:32px;">
-  {{ content }}
+<!-- 📌 본문 카드 래퍼 : Projects 상세와 동일 폭/마진 -->
+<div class="post-content-wrapper" style="max-width:900px; margin:0 auto 40px;">
+  <article class="section-card section-card--post-main">
+    {{ content }}
+  </article>
 </div>
 
-<!-- 📌 PREV / NEXT NAVIGATION -->
-{% if page.previous or page.next %}
-<nav class="post-pagination" style="max-width:820px; margin:0 auto 60px; display:flex; gap:14px; flex-wrap:wrap;">
-  {% if page.previous %}
+<!-- 📌 BLOG PREV / NEXT NAVIGATION (Projects와 완전 동일한 레이아웃) -->
+{% assign prev_post = page.previous %}
+{% assign next_post = page.next %}
+
+{% if prev_post or next_post %}
+<nav class="post-pagination" style="max-width:900px; margin:0 auto 60px; display:flex; gap:14px; flex-wrap:wrap;">
+
+  {% if prev_post %}
     <a
       class="post-pagination-link post-pagination-prev"
-      href="{{ page.previous.url | relative_url }}"
+      href="{{ prev_post.url | relative_url }}"
       style="
         flex:1 1 240px;
         text-decoration:none;
@@ -59,15 +68,15 @@ layout: default
         ← 이전 글
       </span>
       <span style="font-size:0.95rem; color:#e5e7eb;">
-        {{ page.previous.title }}
+        {{ prev_post.title }}
       </span>
     </a>
   {% endif %}
 
-  {% if page.next %}
+  {% if next_post %}
     <a
       class="post-pagination-link post-pagination-next"
-      href="{{ page.next.url | relative_url }}"
+      href="{{ next_post.url | relative_url }}"
       style="
         flex:1 1 240px;
         text-decoration:none;
@@ -87,14 +96,13 @@ layout: default
         다음 글 →
       </span>
       <span style="font-size:0.95rem; color:#e5e7eb;">
-        {{ page.next.title }}
+        {{ next_post.title }}
       </span>
     </a>
   {% endif %}
 </nav>
 
 <script>
-  // 살짝 호버 효과
   document.querySelectorAll('.post-pagination-link').forEach(function(el){
     el.addEventListener('mouseenter', function(){
       el.style.boxShadow = '0 22px 48px rgba(0,0,0,0.95), 0 0 0 1px rgba(96,165,250,0.65)';
