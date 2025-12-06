@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 7
 title: AI Food Calorie Estimation
 permalink: /projects/ai-food-calorie-estimation/
 ---
