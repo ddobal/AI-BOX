@@ -1,50 +1,93 @@
 ---
-layout: page
-title: About
+layout: default
+title: About Me
 permalink: /about/
 ---
 
-# 👋 안녕하세요, 정현석입니다.
+<style>
+.about-container {
+  max-width: 820px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
 
-엔지니어이자 프로덕트 메이커로서,  
-**“실제로 사람들이 쓰는 기능을 AI로 어떻게 강화할 수 있을까?”** 를 늘 고민하고 있습니다.
+.about-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: 20px;
+  color: #fff;
+}
 
----
+.about-sub {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 25px;
+}
 
-## 🎯 What I Do
+.about-section {
+  text-align: left;
+  margin-top: 40px;
+  background: #161616;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
 
-- **Generative AI & Computer Vision**  
-  - 이미지 생성, 객체 탐지, 비전 기반 인사이트 추출  
-- **Product & Backend**  
-  - 간단한 아이디어를 빠르게 프로토타입으로 만들고  
-    실제로 배포해 보는 과정을 좋아합니다.  
-- **Automation & Tooling**  
-  - 반복되는 작업을 스크립트·툴로 치환해서  
-    “사람이 더 중요한 일에 집중할 수 있게” 만드는 걸 목표로 합니다.
+.about-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
 
----
+.about-section p,
+.about-section li {
+  color: #ccc;
+  line-height: 1.55rem;
+}
 
-## 🧠 Interests
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-top: 10px;
+  border: 2px solid #333;
+}
+</style>
 
-- <strong>Generative AI</strong> – Stable Diffusion, LLM, 에이전트, 프롬프트 엔지니어링  
-- <strong>Computer Vision</strong> – Object Detection, Tracking, Image Segmentation  
-- <strong>Data & Analytics</strong> – 로그 기반 분석, 모델 실험/비교, A/B 테스트  
+<div class="about-container">
+  <img src="/assets/img/prof_pic.png" class="profile-img">
 
----
+  <div class="about-title">Hyun-seok Jung</div>
+  <div class="about-sub">AI Engineer • Product Developer</div>
 
-## 🛠 Tech Stack
+  <p>
+    Computer Vision, Generative AI, 자동화 시스템을 중심으로  
+    **사용자 경험 + 모델 정확도 + 운영 효율성**을 모두 개선하는 AI 제작에 관심이 많습니다.
+  </p>
 
-- **Languages**  
-  - Python, (필요 시) C/C++ 기초
-- **AI / ML**  
-  - PyTorch, TensorFlow, OpenCV, scikit-learn  
-- **Infra & Tools**  
-  - Docker, Linux, Git/GitHub, REST API, 간단한 웹 훅/자동화
+  <div class="about-section">
+    <h2>🎯 Focus Areas</h2>
+    <ul>
+      <li>Generative AI (Diffusion, LLM 활용 구조 설계)</li>
+      <li>Computer Vision (Detection, Pose, Segmentation)</li>
+      <li>Automation & Product Development</li>
+    </ul>
+  </div>
 
----
+  <div class="about-section">
+    <h2>🛠 Tech Stack</h2>
+    <ul>
+      <li>Python, C++</li>
+      <li>PyTorch, TensorFlow</li>
+      <li>Docker, Linux</li>
+      <li>ML Ops · Model Optimization</li>
+    </ul>
+  </div>
 
-## 📬 Contact
-
-- **Email**: <ddobal@gmail.com>  
-
-새로운 기술, 재미있는 프로젝트, 협업 제안 등 언제든 편하게 연락 주세요.
+  <div class="about-section">
+    <h2>📫 Contact</h2>
+    <p>ddoball@gmail.com</p>
+  </div>
+</div>
