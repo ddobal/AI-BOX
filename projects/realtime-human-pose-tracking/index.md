@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 5
 title: Realtime Human Pose Tracking
 permalink: /projects/realtime-human-pose-tracking/
 ---
