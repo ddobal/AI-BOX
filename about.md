@@ -34,7 +34,7 @@ permalink: /about/
 
   /* About 페이지 전용: 카드 간 세로 간격 / 내부 여백 조정 */
   .about-container .section-card {
-    margin-bottom: 20px !important;   /* 카드 사이 간격 넉넉하게 */
+    margin-bottom: 20px !important;   /* 카드 사이 간격 */
     padding: 28px 28px 30px;          /* 기본보다 살짝 넓게 */
   }
 
@@ -128,9 +128,8 @@ permalink: /about/
   <div class="section-card">
     <div class="about-profile-wrapper">
       <div class="about-profile-photo">
-        <!-- TODO: 여기에 실제 프로필 이미지 경로 넣기 -->
-        <!-- 예시: assets/img/profile.jpg -->
-        <img src="/assets/img/profile.jpg" alt="Profile photo">
+        <!-- 실제 프로필 이미지 경로 (assets/img/profile.jpg 에 파일이 있다고 가정) -->
+        <img src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Profile photo">
       </div>
 
       <div class="about-profile-text">
