@@ -66,9 +66,10 @@ order: 7
     <line x1="710" y1="130" x2="720" y2="130" stroke="#64748b" stroke-width="2"/>
     <polygon points="720,130 710,125 710,135" fill="#64748b"/>
 
-    <!-- Output / Draw Boxes (텍스트를 박스 안으로 이동) -->
+    <!-- Output / Draw Boxes : 두 줄로 변경 -->
     <rect x="720" y="95" width="100" height="70" rx="10" fill="#020617" stroke="#f97316" stroke-width="2"/>
-    <text x="770" y="125" font-size="11" fill="#fed7aa" text-anchor="middle">Bounding Box 그리기</text>
+    <text x="770" y="122" font-size="11" fill="#fed7aa" text-anchor="middle">Bounding Box</text>
+    <text x="770" y="140" font-size="11" fill="#fed7aa" text-anchor="middle">그리기</text>
   </svg>
 </div>
 
