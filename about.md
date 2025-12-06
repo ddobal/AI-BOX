@@ -39,8 +39,6 @@ permalink: /about/
 
   /* 프로필 카드 레이아웃 */
   .about-profile-wrapper {
-    max-width:920px;
-    margin:0 auto 32px;
     display:flex;
     gap:24px;
     align-items:center;
@@ -105,42 +103,44 @@ permalink: /about/
 </style>
 
 <!-- 프로필 + 바이오 + 스킬 태그 -->
-<div class="section-card about-profile-wrapper">
-  <div class="about-profile-photo">
-    <!-- TODO: 여기에 실제 프로필 이미지 경로 넣기 -->
-    <!-- 예시: assets/img/profile.jpg -->
-    <img src="/assets/img/profile.jpg" alt="Profile photo">
-  </div>
-
-  <div class="about-profile-text">
-    <div class="about-section-title" style="margin-bottom:6px;">
-      <svg viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="#7dd3fc" stroke-width="1.4"/>
-        <path d="M12 8.5v.01" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 11v5" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <h2 style="margin:0;">Introduction</h2>
+<div class="section-card" style="max-width:920px; margin:0 auto 32px;">
+  <div class="about-profile-wrapper">
+    <div class="about-profile-photo">
+      <!-- TODO: 여기에 실제 프로필 이미지 경로 넣기 -->
+      <!-- 예시: assets/img/profile.jpg -->
+      <img src="/assets/img/profile.jpg" alt="Profile photo">
     </div>
 
-    <div class="about-profile-name">
-      정현석 · AI 전공 재학생
-    </div>
-    <div class="about-profile-meta">
-      딥러닝·컴퓨터비전 실습을 꾸준히 해 보면서, 실험 과정을 기록하는 습관을 만들고 있는 중이다.
-    </div>
-    <p>
-      모델이 왜 그 결과를 내는지 궁금해서, 직접 코드를 수정해 보고 그래프를 그려보는 걸 좋아한다.
-      이 포트폴리오는 그런 실험과 과제를 하나씩 모아두는 “개인 연구 노트”에 가깝다.
-    </p>
+    <div class="about-profile-text">
+      <div class="about-section-title" style="margin-bottom:6px;">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="#7dd3fc" stroke-width="1.4"/>
+          <path d="M12 8.5v.01" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
+          <path d="M12 11v5" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h2 style="margin:0;">Introduction</h2>
+      </div>
 
-    <div class="skill-tag-list">
-      <span class="skill-tag">Python · NumPy · Pandas</span>
-      <span class="skill-tag">PyTorch 기초</span>
-      <span class="skill-tag">scikit-learn</span>
-      <span class="skill-tag">CNN · 이미지 분류</span>
-      <span class="skill-tag">Computer Vision 입문</span>
-      <span class="skill-tag">Git · GitHub</span>
-      <span class="skill-tag">Jekyll · GitHub Pages</span>
+      <div class="about-profile-name">
+        정현석 · AI 전공 재학생
+      </div>
+      <div class="about-profile-meta">
+        딥러닝·컴퓨터비전 실습을 꾸준히 해 보면서, 실험 과정을 기록하는 습관을 만들고 있는 중이다.
+      </div>
+      <p>
+        모델이 왜 그 결과를 내는지 궁금해서, 직접 코드를 수정해 보고 그래프를 그려보는 걸 좋아한다.
+        이 포트폴리오는 그런 실험과 과제를 하나씩 모아두는 “개인 연구 노트”에 가깝다.
+      </p>
+
+      <div class="skill-tag-list">
+        <span class="skill-tag">Python · NumPy · Pandas</span>
+        <span class="skill-tag">PyTorch 기초</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">CNN · 이미지 분류</span>
+        <span class="skill-tag">Computer Vision 입문</span>
+        <span class="skill-tag">Git · GitHub</span>
+        <span class="skill-tag">Jekyll · GitHub Pages</span>
+      </div>
     </div>
   </div>
 </div>
