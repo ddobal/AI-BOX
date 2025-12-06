@@ -267,8 +267,7 @@ permalink: /about/
       <li>작은 개인 프로젝트도 Projects에 모두 아카이빙</li>
       <li>비전·생성 모델 실험을 더 체계적으로 문서화</li>
       <li>태그, 검색 등 탐색 기능 강화</li>
-      <li>학기별 정리 페이지(“Semester Notes”) 추가</li>
-    </ul>
+      </ul>
 
     <p>
       아직은 공부 중인 학생이지만,
