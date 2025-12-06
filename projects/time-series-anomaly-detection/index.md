@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 8
 title: Time-series Anomaly Detection
 permalink: /projects/time-series-anomaly-detection/
 ---
