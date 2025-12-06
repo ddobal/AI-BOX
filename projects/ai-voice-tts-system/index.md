@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 9
 title: AI Voice TTS System
 permalink: /projects/ai-voice-tts-system/
 ---
