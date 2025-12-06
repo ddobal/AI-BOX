@@ -1,60 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="utf-8">
-    <title>
-      {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
-    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="{{ site.description | escape }}">
-
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <title>
+      {% if page.title %}{{ page.title }} · {% endif %}
+      {{ site.title | default: "Hyun-seok Jung's AI-BOX" }}
+    </title>
 
     {% seo %}
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a class="site-title" href="{{ "/" | relative_url }}">
-          {{ site.title }}
-        </a>
-        <ul class="nav-links">
-          {% for item in site.nav %}
-          <li>
-            <a href="{{ item.link | relative_url }}"
-               {% if page.url == item.link %}class="active"{% endif %}>
-              {{ item.name }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-    </header>
+    {% include head-custom.html %}
 
-    <div class="layout">
-      <aside class="sidebar">
-        <div class="avatar-wrapper">
-          <img src="{{ "/assets/img/prof_pic.png" | relative_url }}"
-               alt="Profile picture"
-               class="avatar">
-        </div>
-        <div class="sidebar-text">
-          <h2>{{ site.title }}</h2>
-          <p class="sidebar-desc">{{ site.description }}</p>
-          <p class="sidebar-email">
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <!-- 기본 Slate 스타일 불러오기 (GitHub Pages에서 자동 생성됨) -->
+    <link rel="stylesheet"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <!-- 커스텀 레이아웃 스타일 -->
+    <style>
+      /* 전체 배경 & 글꼴 */
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at top, #050816 0, #02040a 45%, #000000 100%);
+        color: #e4e4e4;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      /* 페이지 컨테이너 */
+      .page-wrapper {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 24px 24px 80px;
+      }
+
+      /* 상단 네비게이션 바 (좌측 박스 대신) */
+      .site-header {
+        position: sticky;
+        top: 16px;
+        z-index: 30;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        padding: 12px 22px;
+        margin-bottom: 36px;
+
+        border-radius: 999px;
+        background: radial-gradient(
+          circle at top left,
+          rgba(88, 101, 242, 0.26),
+          rgba(3, 7, 18, 0.96)
+        );
+        border: 1px solid rgba(255,255,255,0.18);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.9);
+        backdrop-filter: blur(8px);
+      }
+
+      .site-title-block {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .site-title {
+        font-size: 0.95rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+        color: #f5f5f5;
+        text-decoration: none;
+        opacity: 0.96;
+      }
+
+      .site-subtitle {
+        margin: 0;
+        font-size: 0.78rem;
+        color: #b3b3b3;
+      }
+
+      /* 메뉴 영역 */
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .site-nav a {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #d6d6d6;
+        text-decoration: none;
+        padding: 6px 14px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        transition: all 0.18s ease-out;
+        white-space: nowrap;
+      }
+
+      .site-nav a:hover {
+        color: #ffffff;
+        border-color: rgba(255,255,255,0.35);
+        background: rgba(0,0,0,0.45);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      }
+
+      /* 메인 콘텐츠 영역 (여기에 index.md 내용이 들어감) */
+      main.page-content {
+        margin-top: 40px; /* 헤더와 히어로 사이 여백 */
+      }
+
+      /* 푸터 (원하면 나중에 내용 추가 가능) */
+      footer.site-footer {
+        margin-top: 60px;
+        font-size: 0.75rem;
+        color: #777;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .page-wrapper {
+          padding: 16px 12px 40px;
+        }
+
+        .site-header {
+          top: 8px;
+          padding: 10px 14px;
+          border-radius: 18px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+        }
+
+        .site-nav {
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          row-gap: 4px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- 상단 네비게이션 -->
+      <header class="site-header">
+        <div class="site-title-block">
+          <a href="{{ '/' | relative_url }}" class="site-title">
+            {{ site.title | default: "Hyun-seok Jung's AI-BOX" }}
+          </a>
+          <p class="site-subtitle">
+            {{ site.description | default: "Personal research blog for vision · generative AI · automation." }}
           </p>
         </div>
-      </aside>
 
-      <main class="content">
+        <nav class="site-nav">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        </nav>
+      </header>
+
+      <!-- 여기 안에 index.md / about.md 등의 내용이 들어감 -->
+      <main class="page-content">
         {{ content }}
       </main>
-    </div>
 
-    <footer class="site-footer">
-      <p>© {{ "now" | date: "%Y" }} {{ site.title }}</p>
-    </footer>
+      <!-- 필요하면 나중에 채워 넣기 -->
+      <footer class="site-footer">
+        {{ site.title | default: "Hyun-seok Jung's AI-BOX" }} · Powered by GitHub Pages & Jekyll
+      </footer>
+    </div>
   </body>
 </html>
