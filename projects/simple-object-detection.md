@@ -63,12 +63,12 @@ order: 7
     <text x="615" y="130" font-size="11" fill="#c7d2fe" text-anchor="middle">Haar Cascade / YOLO</text>
 
     <!-- Arrow 3 -->
-    <line x1="710" y1="130" x2="780" y2="130" stroke="#64748b" stroke-width="2"/>
-    <polygon points="780,130 770,125 770,135" fill="#64748b"/>
+    <line x1="710" y1="130" x2="720" y2="130" stroke="#64748b" stroke-width="2"/>
+    <polygon points="720,130 710,125 710,135" fill="#64748b"/>
 
-    <!-- Output / Draw Boxes -->
-    <rect x="780" y="90" width="40" height="80" rx="8" fill="#020617" stroke="#f97316" stroke-width="2"/>
-    <text x="760" y="180" font-size="11" fill="#fed7aa" text-anchor="middle">Bounding Box 그리기</text>
+    <!-- Output / Draw Boxes (텍스트를 박스 안으로 이동) -->
+    <rect x="720" y="95" width="100" height="70" rx="10" fill="#020617" stroke="#f97316" stroke-width="2"/>
+    <text x="770" y="125" font-size="11" fill="#fed7aa" text-anchor="middle">Bounding Box 그리기</text>
   </svg>
 </div>
 
