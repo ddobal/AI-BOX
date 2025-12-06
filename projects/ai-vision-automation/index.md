@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 1
 title: AI Vision Automation
 permalink: /projects/ai-vision-automation/
 ---
