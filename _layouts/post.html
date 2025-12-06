@@ -29,8 +29,85 @@ layout: default
   </p>
 </div>
 
-
 <!-- 📌 POST CONTENT -->
-<div class="section-card" style="max-width:900px; margin:0 auto 80px; padding:32px;">
+<div class="section-card" style="max-width:900px; margin:0 auto 40px; padding:32px;">
   {{ content }}
 </div>
+
+<!-- 📌 PREV / NEXT NAVIGATION -->
+{% if page.previous or page.next %}
+<nav class="post-pagination" style="max-width:900px; margin:0 auto 60px; display:flex; gap:14px; flex-wrap:wrap;">
+  {% if page.previous %}
+    <a
+      class="post-pagination-link post-pagination-prev"
+      href="{{ page.previous.url | relative_url }}"
+      style="
+        flex:1 1 240px;
+        text-decoration:none;
+        padding:14px 18px;
+        border-radius:18px;
+        background: radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%);
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03);
+        display:flex;
+        flex-direction:column;
+        gap:4px;
+        transition:all 0.22s ease-out;
+      "
+    >
+      <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:#9ca3af;">
+        ← 이전 글
+      </span>
+      <span style="font-size:0.95rem; color:#e5e7eb;">
+        {{ page.previous.title }}
+      </span>
+    </a>
+  {% endif %}
+
+  {% if page.next %}
+    <a
+      class="post-pagination-link post-pagination-next"
+      href="{{ page.next.url | relative_url }}"
+      style="
+        flex:1 1 240px;
+        text-decoration:none;
+        padding:14px 18px;
+        border-radius:18px;
+        background: radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%);
+        border:1px solid rgba(255,255,255,0.08);
+        box-shadow:0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03);
+        display:flex;
+        flex-direction:column;
+        gap:4px;
+        text-align:right;
+        transition:all 0.22s ease-out;
+      "
+    >
+      <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:#9ca3af;">
+        다음 글 →
+      </span>
+      <span style="font-size:0.95rem; color:#e5e7eb;">
+        {{ page.next.title }}
+      </span>
+    </a>
+  {% endif %}
+</nav>
+
+<script>
+  // 살짝 호버 효과 (inline style이라 JS로 박아줌)
+  document.querySelectorAll('.post-pagination-link').forEach(function(el){
+    el.addEventListener('mouseenter', function(){
+      el.style.boxShadow = '0 22px 48px rgba(0,0,0,0.95), 0 0 0 1px rgba(96,165,250,0.65)';
+      el.style.borderColor = 'rgba(129,140,248,0.8)';
+      el.style.background = 'radial-gradient(circle at top, #202234 0, #050509 60%, #010206 100%)';
+      el.style.transform = 'translateY(-3px)';
+    });
+    el.addEventListener('mouseleave', function(){
+      el.style.boxShadow = '0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03)';
+      el.style.borderColor = 'rgba(255,255,255,0.08)';
+      el.style.background = 'radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%)';
+      el.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+{% endif %}
