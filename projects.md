@@ -64,8 +64,8 @@ permalink: /projects/
   </svg>
   {% endcapture %}
 
-  <!-- 1 -->
-  <section class="section-card">
+  <!-- 1: AI Vision Automation -->
+  <a class="section-card section-card-link" href="{{ '/projects/ai-vision-automation/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -77,10 +77,10 @@ permalink: /projects/
       실시간 Object Detection + Tracking을 기반으로  
       특정 이벤트 자동 감지 및 로깅을 수행하는 현장 자동화 시스템 구축.
     </p>
-  </section>
+  </a>
 
-  <!-- 2 -->
-  <section class="section-card">
+  <!-- 2: Diffusion-based Image Generator -->
+  <a class="section-card section-card-link" href="{{ '/projects/diffusion-image-generator/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -92,10 +92,10 @@ permalink: /projects/
       Stable Diffusion 기반 모델을 커스터마이징하여  
       캐릭터/프로필/컨셉 아트 생성 자동화 파이프라인 제작.
     </p>
-  </section>
+  </a>
 
-  <!-- 3 -->
-  <section class="section-card">
+  <!-- 3: RL Trading Bot -->
+  <a class="section-card section-card-link" href="{{ '/projects/rl-trading-bot/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -107,10 +107,10 @@ permalink: /projects/
       강화학습 환경 구축 → 정책 학습 →  
       거래소 API 실거래 연동까지 진행한 트레이딩 에이전트 실험 프로젝트.
     </p>
-  </section>
+  </a>
 
-  <!-- 4 -->
-  <section class="section-card">
+  <!-- 4: OCR 기반 문서 자동화 시스템 -->
+  <a class="section-card section-card-link" href="{{ '/projects/ocr-doc-automation/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -122,10 +122,10 @@ permalink: /projects/
       문서 스캔 이미지를 OCR로 텍스트 변환 후,  
       필드 자동 분류·정제하여 업무 자동화를 구현한 프로젝트.
     </p>
-  </section>
+  </a>
 
-  <!-- 5 -->
-  <section class="section-card">
+  <!-- 5: Realtime Human Pose Tracking -->
+  <a class="section-card section-card-link" href="{{ '/projects/realtime-human-pose-tracking/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -137,10 +137,10 @@ permalink: /projects/
       MoveNet 기반 실시간 신체 포즈 분석 시스템.  
       특정 동작 감지 및 자세 분석 기능을 포함.
     </p>
-  </section>
+  </a>
 
-  <!-- 6 -->
-  <section class="section-card">
+  <!-- 6: Generative Style Transfer Engine -->
+  <a class="section-card section-card-link" href="{{ '/projects/generative-style-transfer-engine/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -152,10 +152,10 @@ permalink: /projects/
       다중 스타일 이미지 변환을 위한 Style Transfer 엔진 제작.  
       예술 스타일, 캐릭터 스타일 등 자동 변환.
     </p>
-  </section>
+  </a>
 
-  <!-- 7 -->
-  <section class="section-card">
+  <!-- 7: AI 기반 음식 칼로리 추정 -->
+  <a class="section-card section-card-link" href="{{ '/projects/ai-food-calorie-estimation/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -167,10 +167,10 @@ permalink: /projects/
       음식 이미지로 음식 종류·양을 추정해  
       칼로리를 예측하는 CV 모델 실험.
     </p>
-  </section>
+  </a>
 
-  <!-- 8 -->
-  <section class="section-card">
+  <!-- 8: Time-series Anomaly Detection -->
+  <a class="section-card section-card-link" href="{{ '/projects/time-series-anomaly-detection/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -182,10 +182,10 @@ permalink: /projects/
       제조·금융 데이터 기반 이상치 탐지를 위한  
       시계열 LSTM/GRU 예측 모델 실험.
     </p>
-  </section>
+  </a>
 
-  <!-- 9 -->
-  <section class="section-card">
+  <!-- 9: AI Voice TTS System -->
+  <a class="section-card section-card-link" href="{{ '/projects/ai-voice-tts-system/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -197,10 +197,10 @@ permalink: /projects/
       Tacotron2 + HiFiGAN 기반 커스텀 음색 TTS 모델.  
       짧은 데이터로 개인 음색 복제 실험.
     </p>
-  </section>
+  </a>
 
-  <!-- 10 -->
-  <section class="section-card">
+  <!-- 10: Vision 기반 얼굴 인증 출입 시스템 -->
+  <a class="section-card section-card-link" href="{{ '/projects/vision-face-access-control/' | relative_url }}">
     <h2 class="section-heading">
       <span class="section-heading-icon">
         {{ project_icon_svg }}
@@ -212,6 +212,6 @@ permalink: /projects/
       얼굴 인식 기반 출입 관리 프로토타입 제작.  
       Embedding + Threshold 기반 인증 구조 설계.
     </p>
-  </section>
+  </a>
 
 </div>
