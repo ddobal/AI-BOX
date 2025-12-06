@@ -6,11 +6,146 @@ permalink: /
 
 <style>
 /* ===========================
+   Global layout & header override
+   =========================== */
+
+/* 전체 배경과 기본 폰트 */
+body {
+  background: radial-gradient(circle at top, #050816 0, #02040a 45%, #000000 100%);
+  color: #e4e4e4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* 페이지 전체 래퍼 */
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* 기본 왼쪽 고정 헤더를 상단 네비게이션 바 형태로 변경 */
+.wrapper > header {
+  position: sticky;
+  top: 16px;
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 14px 22px;
+  margin: 0 0 12px;
+
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(88, 101, 242, 0.26),
+    rgba(3, 7, 18, 0.96)
+  );
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.9);
+
+  float: none !important;
+  width: auto !important;
+}
+
+/* 사이트 타이틀 */
+.wrapper > header h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.wrapper > header h1 a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+/* 부제(설명) */
+.wrapper > header p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #a8a8a8;
+}
+
+/* 프로필 이미지는 상단 바에서는 숨김 */
+.wrapper > header img {
+  display: none;
+}
+
+/* 네비게이션 링크 (About / Blog / Projects) */
+.wrapper > header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper > header ul li {
+  margin: 0;
+}
+
+.wrapper > header ul a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d6d6d6;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.18s ease-out;
+}
+
+.wrapper > header ul a:hover {
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.4);
+}
+
+/* "View on GitHub" 같은 기본 문구는 숨기기 */
+.wrapper > header .view {
+  display: none;
+}
+
+/* 본문 영역 왼쪽 마진 제거 */
+.wrapper > section {
+  margin: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 12px 40px;
+  }
+
+  .wrapper > header {
+    top: 8px;
+    padding: 10px 14px;
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .wrapper > header ul {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+}
+
+/* ===========================
    Hero Section Base
    =========================== */
 .hero {
   max-width: 920px;
-  margin: 80px auto 40px;
+  margin: 120px auto 40px;  /* 상단 네비 아래에 적당히 떨어지도록 */
   padding: 40px 32px 36px;
   background: radial-gradient(circle at top, #202020 0, #101010 55%, #050505 100%);
   border-radius: 26px;
@@ -258,7 +393,7 @@ permalink: /
 /* 모바일 대응 */
 @media (max-width: 768px) {
   .hero {
-    margin: 40px 12px 32px;
+    margin: 80px 12px 32px;
     padding: 26px 18px 22px;
   }
   
