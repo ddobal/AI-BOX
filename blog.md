@@ -4,32 +4,36 @@ title: Blog
 permalink: /blog/
 ---
 
-<!-- 📌 새 미니 히어로 블록 -->
+<!-- 📌 미니 히어로 (SVG 로고 적용) -->
 <div class="page-mini-hero">
-  <div class="page-mini-hero-icon">📝</div>
+  <div class="page-mini-hero-icon">
+    <!-- 펜/글쓰기 아이콘 -->
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+      <path d="M3 17.25V21h3.75l11-11.03-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+            fill="url(#blogGrad)" />
+      <defs>
+        <linearGradient id="blogGrad">
+          <stop offset="0%" stop-color="#38f9d7"/>
+          <stop offset="100%" stop-color="#4facfe"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
   <h1>Blog</h1>
   <p class="mini-hero-sub">
-    공부하면서 남기고 싶은 메모, 실험 로그, 프로젝트 회고 등을 기록하는 공간입니다.
+    공부하며 남겨두고 싶은 메모, 실험 기록, 프로젝트 회고를 공유하는 공간입니다.
   </p>
 </div>
 
 <div class="section-card-grid">
-  {% for post in site.posts %}
-  <section class="section-card">
-    <h2>🗂 {{ post.title }}</h2>
-    <p class="section-card-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-    <p>{{ post.excerpt }}</p>
-    <a href="{{ post.url | relative_url }}">Read more →</a>
-  </section>
-  {% endfor %}
 
-  {% if site.posts == empty %}
   <section class="section-card">
-    <h2>🗂 아직 포스트가 없습니다.</h2>
+    <h2>포스트가 없습니다.</h2>
     <p>
-      첫 번째 글은 "XGBoost 모델 튜닝 로그"나  
-      "강화학습 환경 설계 팁" 같은 내용을 적어보는 것도 좋아요.
+      첫 번째 글을 작성하면 이 공간에 표시됩니다.  
+      예: “XGBoost 모델 튜닝 로그”, “강화학습 환경 설계 과정” 등.
     </p>
   </section>
-  {% endif %}
+
 </div>
