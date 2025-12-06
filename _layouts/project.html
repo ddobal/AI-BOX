@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+<!-- 📌 프로젝트 상세 내용 래퍼 -->
+<div class="project-content-wrapper" style="max-width:900px; margin:0 auto 32px;">
+  {{ content }}
+</div>
+
+<!-- 📌 PROJECT PREV / NEXT NAVIGATION -->
+{% assign projects = site.pages | where: "layout", "project" | sort: "order" %}
+{% assign current_url = page.url %}
+{% assign current_index = nil %}
+
+{% for p in projects %}
+  {% if p.url == current_url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% if current_index != nil %}
+  {% assign prev_index = current_index | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
+  {% assign prev_project = projects[prev_index] %}
+  {% assign next_project = projects[next_index] %}
+
+  {% if prev_project or next_project %}
+  <nav class="post-pagination project-pagination" style="max-width:900px; margin:0 auto 60px; display:flex; gap:14px; flex-wrap:wrap;">
+
+    {% if prev_project %}
+      <a
+        class="post-pagination-link post-pagination-prev"
+        href="{{ prev_project.url | relative_url }}"
+        style="
+          flex:1 1 240px;
+          text-decoration:none;
+          padding:14px 18px;
+          border-radius:18px;
+          background: radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%);
+          border:1px solid rgba(255,255,255,0.08);
+          box-shadow:0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03);
+          display:flex;
+          flex-direction:column;
+          gap:4px;
+          transition:all 0.22s ease-out;
+        "
+      >
+        <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:#9ca3af;">
+          ← 이전 프로젝트
+        </span>
+        <span style="font-size:0.95rem; color:#e5e7eb;">
+          {{ prev_project.title }}
+        </span>
+      </a>
+    {% endif %}
+
+    {% if next_project %}
+      <a
+        class="post-pagination-link post-pagination-next"
+        href="{{ next_project.url | relative_url }}"
+        style="
+          flex:1 1 240px;
+          text-decoration:none;
+          padding:14px 18px;
+          border-radius:18px;
+          background: radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%);
+          border:1px solid rgba(255,255,255,0.08);
+          box-shadow:0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03);
+          display:flex;
+          flex-direction:column;
+          gap:4px;
+          text-align:right;
+          transition:all 0.22s ease-out;
+        "
+      >
+        <span style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.12em; color:#9ca3af;">
+          다음 프로젝트 →
+        </span>
+        <span style="font-size:0.95rem; color:#e5e7eb;">
+          {{ next_project.title }}
+        </span>
+      </a>
+    {% endif %}
+  </nav>
+
+  <script>
+    document.querySelectorAll('.post-pagination-link').forEach(function(el){
+      el.addEventListener('mouseenter', function(){
+        el.style.boxShadow = '0 22px 48px rgba(0,0,0,0.95), 0 0 0 1px rgba(96,165,250,0.65)';
+        el.style.borderColor = 'rgba(129,140,248,0.8)';
+        el.style.background = 'radial-gradient(circle at top, #202234 0, #050509 60%, #010206 100%)';
+        el.style.transform = 'translateY(-3px)';
+      });
+      el.addEventListener('mouseleave', function(){
+        el.style.boxShadow = '0 14px 34px rgba(0,0,0,0.9),0 0 0 1px rgba(255,255,255,0.03)';
+        el.style.borderColor = 'rgba(255,255,255,0.08)';
+        el.style.background = 'radial-gradient(circle at top, #171821 0, #050509 60%, #020308 100%)';
+        el.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+  {% endif %}
+{% endif %}
