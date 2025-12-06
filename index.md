@@ -415,7 +415,7 @@ body {
   <div class="hero-inner">
     <div class="hero-badge">
       <div class="hero-badge-icon"></div>
-      AI Major 2nd Year · Student Developer
+      AI Major · Student Developer
     </div>
 
     <div class="hero-title">Hyun-seok Jung</div>
