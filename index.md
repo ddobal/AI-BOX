@@ -415,19 +415,20 @@ body {
   <div class="hero-inner">
     <div class="hero-badge">
       <div class="hero-badge-icon"></div>
-      AI Engineer & Product Developer
+      AI Major 2nd Year · Student Developer
     </div>
 
     <div class="hero-title">Hyun-seok Jung</div>
 
     <div class="hero-subtitle">
-      <span class="hero-highlight">Computer Vision · Generative AI · Automation</span>
+      <span class="hero-highlight">Computer Vision · Generative AI · Data Projects</span>
     </div>
 
     <p class="hero-description">
-      모델 정확도와 Latency, 그리고 운영 난이도까지 동시에 고려하는
-      <strong>“실제로 돌릴 수 있는 AI 시스템”</strong>에 집중하고 있습니다.
-      프로덕트 고민과 연구를 함께 가져가는 엔지니어를 지향합니다.
+      인공지능학과 2학년으로, 수업에서 배운 내용과 개인적으로 궁금했던 주제를
+      작은 프로젝트로 직접 만들어 보고 있습니다. 이 포트폴리오는 거창한 완성품보다는
+      <strong>“실제로 코드를 짜 보면서 배운 과정”</strong>을 기록하는 데 더 가깝습니다.
+      앞으로 연구나 실무로 이어질 수 있는 기본기를 차분히 쌓는 것을 목표로 합니다.
     </p>
 
     <div class="hero-buttons">
@@ -443,7 +444,7 @@ body {
     </div>
 
     <div class="hero-footer">
-      Currently exploring <span>Vision · Diffusion · Production ML · Automation</span>
+      요즘은 <span>Computer Vision, 생성형 AI, 자동화 실습</span> 위주로 공부하고 있습니다.
     </div>
   </div>
 </div>
