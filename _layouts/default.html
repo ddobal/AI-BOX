@@ -11,7 +11,11 @@
     </title>
 
     {% seo %}
-    {% include head-custom.html %}
+    <!-- {% include head-custom.html %}  ← 이 줄은 아예 삭제하거나 주석 처리 -->
+
+    <link rel="stylesheet"
+          href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
 
     <!-- 기본 Slate 스타일 불러오기 (GitHub Pages에서 자동 생성됨) -->
     <link rel="stylesheet"
