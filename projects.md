@@ -1,88 +1,76 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
 <style>
-.project-grid {
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.card {
-  background: rgba(255,255,255,0.06);
-  padding: 18px 18px 16px 18px;
-  border-radius: 18px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  transition: 0.18s ease;
-  font-size: 14px;
+.project-card {
+  background: #161616;
+  border-radius: 14px;
+  padding: 22px;
+  transition: all 0.25s ease;
+  border: 1px solid #222;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  background: rgba(255,255,255,0.09);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  border-color: #444;
 }
 
-.card h3 {
-  margin-top: 0;
-  font-size: 19px;
-  margin-bottom: 6px;
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
 }
 
-.card .tag {
-  display: inline-block;
-  font-size: 11px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  margin-right: 4px;
-  opacity: 0.9;
+.project-sub {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.45rem;
 }
 </style>
 
 # 🚀 Projects
 
-> 실제로 만들어본 프로젝트/프로토타입들을 정리해 두는 공간입니다.  
-> 아래 내용은 예시이니, 진행하면서 하나씩 바꿔 넣으면 됩니다.
+<div class="projects-grid">
 
-<div class="project-grid">
-
-<div class="card">
-  <h3>AI-BOX Automation</h3>
-  <div class="tag">Computer Vision</div>
-  <div class="tag">Backend</div>
-  <p>
-    딥러닝 기반 분석 파이프라인을 실험하기 위한 개인용 샌드박스.  
-    데이터 수집 → 전처리 → 모델 학습/평가 → 결과 리포트까지  
-    한 번에 돌려볼 수 있는 워크플로우를 구성했습니다.
-  </p>
+<div class="project-card">
+  <div class="project-title">AI Vision Automation</div>
+  <div class="project-sub">Computer Vision, Automation</div>
+  <div class="project-desc">
+    산업 현장 자동화를 위해 Object Detection + Tracking 파이프라인을 구축한 프로젝트입니다.
+  </div>
 </div>
 
-<div class="card">
-  <h3>Vision Detector</h3>
-  <div class="tag">Object Detection</div>
-  <div class="tag">Real-time</div>
-  <p>
-    YOLO 계열 모델을 활용한 객체 탐지/트래킹 시스템.  
-    GPU 최적화, 비디오 스트림 입력, 결과 오버레이 UI 등을 포함해  
-    실시간 데모 환경을 구성했습니다.
-  </p>
+<div class="project-card">
+  <div class="project-title">Diffusion-based Image Generator</div>
+  <div class="project-sub">Generative AI, Diffusion Model</div>
+  <div class="project-desc">
+    Stable Diffusion 기반으로 커스텀 파인튜닝한 이미지 생성 모델 제작 프로젝트입니다.
+  </div>
 </div>
 
-<div class="card">
-  <h3>Generative Transformer</h3>
-  <div class="tag">Generative AI</div>
-  <div class="tag">Diffusion</div>
-  <p>
-    Diffusion/Transformer 기반 이미지 생성 실험.  
-    텍스트 프롬프트에 따라 스타일이 달라지는  
-    여러 버전의 모델을 비교·분석했습니다.
-  </p>
+<div class="project-card">
+  <div class="project-title">RL Trading Bot</div>
+  <div class="project-sub">Reinforcement Learning, Trading</div>
+  <div class="project-desc">
+    강화학습 기반으로 포지션 진입/청산 전략을 자동 학습하도록 설계한 알고리즘 트레이딩 프로젝트.
+  </div>
 </div>
 
 </div>
