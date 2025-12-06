@@ -1,57 +1,32 @@
-# Site settings
 title: "Hyun-seok Jung's AI-BOX"
 email: ddobal@gmail.com
 description: >-
   Personal research blog.
 
-# GitHub Pages용: 로컬 레이아웃만 쓰고 테마 gem은 안 씀
-theme:
+# 프로젝트 페이지이므로 이렇게 설정 (https://ddobal.github.io/AI-BOX)
+url: "https://ddobal.github.io"
+baseurl: "/AI-BOX"
 
-# Build settings
+# GitHub Pages 호환용 최소 설정
 markdown: kramdown
-highlighter: rouge
+theme: null
+permalink: /blog/:year/:month/:day/:title/
 
-# 플러그인 전부 비활성화 (빌드 에러 원인 제거)
-plugins: []
+# GitHub Pages에서 허용되는 플러그인만 사용
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:title/
+# 네비게이션 메뉴
+nav:
+  - name: "About"
+    link: "/about/"
+  - name: "Blog"
+    link: "/blog/"
+  - name: "Projects"
+    link: "/projects/"
 
-  pages:
-    output: true
-    permalink: /:title/
-
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
-# Exclude
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - README.md
+# 로케일 옵션 (있어도 되고 없어도 됨)
+kramdown:
+  input: GFM
+  hard_wrap: false
