@@ -81,7 +81,6 @@ excerpt: "작은 숫자 데이터에 MinMaxScaler와 StandardScaler를 적용해
   실험 데이터는 일부러 단순하게 선택했다.
 </p>
 
-```text
 [10, 12, 15, 20, 30]
 
 <p>
