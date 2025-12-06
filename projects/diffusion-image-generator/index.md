@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 2
 title: Diffusion-based Image Generator
 permalink: /projects/diffusion-image-generator/
 ---
