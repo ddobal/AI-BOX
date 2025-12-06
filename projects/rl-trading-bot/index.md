@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: project
+order: 3
 title: RL Trading Bot
 permalink: /projects/rl-trading-bot/
 ---
